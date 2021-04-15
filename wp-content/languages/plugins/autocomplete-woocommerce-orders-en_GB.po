@@ -1,0 +1,57 @@
+# Translation of Plugins - Autocomplete WooCommerce Orders - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Autocomplete WooCommerce Orders - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-17 15:32:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Autocomplete WooCommerce Orders - Stable (latest release)\n"
+
+#: includes/view/backend/tabs.php:3
+msgid "Support"
+msgstr "Support"
+
+#: includes/class-aco.php:86 includes/view/backend/tabs.php:4
+msgid "Documentation"
+msgstr "Documentation"
+
+#: includes/class-aco.php:58 includes/class-aco.php:68
+msgid "Cheatin&#8217; huh?"
+msgstr "Cheatin&#8217; huh?"
+
+#: includes/class-admin.php:141
+msgid "Specify how you want the plugin to work."
+msgstr "Specify how you want the plugin to work."
+
+#: includes/class-admin.php:139
+msgid "Mode"
+msgstr "Mode"
+
+#: includes/class-admin.php:111 includes/class-admin.php:133
+msgid "Autocomplete Orders"
+msgstr "Autocomplete Orders"
+
+#: includes/class-admin.php:103 includes/class-aco.php:87
+msgid "Settings"
+msgstr "Settings"
+
+#. Author URI of the plugin
+msgid "https://quadlayers.com"
+msgstr "https://quadlayers.com"
+
+#. Author of the plugin
+#: includes/view/backend/tabs.php:2
+msgid "QuadLayers"
+msgstr "QuadLayers"
+
+#. Description of the plugin
+msgid "Autocomplete your WooCommerce orders with ease. This plugins works with most major payment providers including PayPal, SagePay and Stripe."
+msgstr "Autocomplete your WooCommerce orders with ease. This plugins works with most major payment providers including PayPal, SagePay and Stripe."
+
+#. Plugin Name of the plugin
+msgid "Autocomplete WooCommerce Orders"
+msgstr "Autocomplete WooCommerce Orders"

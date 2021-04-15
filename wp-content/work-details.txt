@@ -1,0 +1,132 @@
+define('AUTH_KEY',         'PJH2rQ4x[fDzs3iLe+e^5ncc2-n>kt??cwTMd#tfu{|+j3KxW,31bEadcyZ^qMyH');
+define('SECURE_AUTH_KEY',  'N`/sc~y~:D!Q-F+ZU8VbJ5|^s1et5 R;oWWeid6t?Nb=4jbzj60 I+p5-gIC}.jZ');
+define('LOGGED_IN_KEY',    '#&<Q*mlUz =n-+Ks-4(XtQ<O1(c9J`OZMd,[qe^zG}(mi2wUewY6~&H)NGw][[s7');
+define('NONCE_KEY',        ':nu&?##Rl|qAb.&k-+kU|;15--]0Hn0kUdH(~woP&FiW.[Y_verjwjPN.JV|<uLY');
+define('AUTH_SALT',        '~SU?^+ak-#7+Q5[`)aL~@gTpA9V(hbHZG*qa>|[:yg._eKJ&{-)g+!m~hToZTK4w');
+define('SECURE_AUTH_SALT', 'M6L+Nf .(+99[^MH@ke$6{!Xv:_6BotBT.pvDXYcq;V<Kxu.h}DMjS1||}31S)Ie');
+define('LOGGED_IN_SALT',   's]6)9%_KhVP#3 4+4yD=h`s6,GN#V;0^h@IyB9Sf}|Bg92*K3q8+M^YniU!4IjXc');
+define('NONCE_SALT',       'ohW)PJ-A,@v2Q_Dc^L<|*:Ep*+AwZ|}rijo+!L<&,9:E6aNy8yEdAO2]L,z^tlRb');
+
+
+change the structure of rating in listeo-child/listeo-core/content-listing-grid.php
+to attach star to the front of ratings, modify live(staging)/listeo/js/custom.js
+
+6/8~6/14
+1. fixed the menu of mobile, added "category", "inboxes" to the mobile menu
+2. changed the position of desktop menu to the right
+3. Price and description overlap problem was fixed
+4. set the listing title bigger than before
+5. delete the distance radius filter
+6. change the date of event filter, so only show one date picker, but not 2 dates picker, and insert the "when?" filter, so can show datepicker at one time
+7. show the when? where? filter in the same row in desktop
+8. delete the icon in menu, and added seperate line
+9. description showing in 1 row in mobile view
+10. listings in 2 columns in mobile, 3 columns in desktop
+11. worked with smush, and optimized some images
+12. deleted blank space between price and "add favourite" button
+
+
+6/16
+Task: 1.reviews look retarded, fixed that(0.8Hr)
+2. copy the Peerspace mobile filter button(4.5Hr)
+
+6/17
+plugin/include/class-listeo-core-users.php 1hr
+modify email .25hour
+listeo/registration-confirmation.php to reload cristian_script.js(0.8Hour)
+hide the "book listings" 0.2Hour
+fixed some bugs in grazing table lists with css
+
+6/18
+message not sent problem fixed again 0.5 Hour
+customise mobile filter like as peerspace 1Hour
+
+6/19
+1. prove that message working right(15mins)
+ 2. fount the bugs in staging site(30mins)
+3. finished the mobile more filters like Peerspace, including add tags, customise filter button(2.5 Hour)
+4. find the reason why service/celebrant not working(10min)
+5. chatting and accountabillity(15mins)
+
+6/22
+1. watch the task video 15mins
+2. Customise the add listing form(1Hour) wp-admin/listeo-editor/add listing form
+3. moved 2 optional selector to down(30min) 
+
+6/24
+1. do not allow users input or copy negative number in price input
+2. Error(Instant booking placeholder text doesn’t show up) was fixed
+3. Error(title input not working in add listing page) was fixed
+4. Length of Mobile listing title was expaned when it has no reviews, wish cart make smaller than before
+
+6/25
+1. Error:https://hypley.com/listing-category/balloon-garland/  is glitching, problem fixed.(img style)
+2. Error:when typing in search, it also applied to filters number. Fixed(ajax.search.js)
+3.  Keep time there, but users shouldnt have to select it to book. It's just to help people choose a time. Done(bookings.js)
+4. show starting price on map in staging and live site(maps.js)
+
+6/26
+1. fix search page filter like peerspace(1Hour)
+2. Bugs fixed(user interfaces look funny on safari)(35mins)
+
+6/29
+1.Error: listings with multiple options enabled aren't showing them.(30mins)
+2.Error: password needs to be put back into sent email(1Hour 25mins)
+3.Error: when adding a tooltip it shouldnt glitch out fields in add listing(45mins)
+4.Error:  some dont work - some listings displayed on hypley.com lead to error pages that redirect back home(1Hour 5mins)
+5.Error: check email problem on living site( 50mins)
+6. work on accountabillity(5mins)
+
+6/30
+1. Fix the security issues(45mins)
+2. Try to load js code for modal(15mins)
+3. Error: If a field isnt filled in it should go back to that field(2273) fixed (1hour)
+
+7/1
+1. Embeded the popup form when search result is null(2298)(no-found.php, ajax-search-min.js)- 1Hour 30mins
+2. find out the login form code in project(799)--10mins
+3. made an accountabillity(5mins)
+
+7/2
+domain has problem, so did not work
+
+7/3
+1. In user messages shoulnt do able to put in email or websites etc like the description page.(1Hour 25mins)-2407
+2. reviews glitch bugs(20mins)-2403
+3. When person is not a providor, cannot message to him in author page, also changed the description text(35mins)-2400
+
+7/6
+use send grid to create to send another email to a user who doesn't read his previous message 6 hours after-done-2463
+
+7/7 
+users can send message via replying email:
+plugins/listeo-core/includes/class-listeo-core.php, class-listeo-core-messages.php
+
+7/8
+Add bookmarks number
+
+7/9
+check the work details in youtube video(20mins)
+make the feed page like Pinterest(1Hour 50mins)
+
+7/10
+update task: show eventy on author page: 2400
+remove the like text in listing search page
+do not let users to send messages with phone or site url 2407
+bugs in the feature of replying via email 2463
+
+7/15
+1. bug fixed: when users login with facebook, it's role was subscriber-2524(40mins)
+2. let users also can reply via email when received the new conversation email(2Hour 15mins)-2529
+3. fixed search 2 times problem- 40mins
+4. There needs to be time for the other person to react(30mins)
+
+7/16
+1. finished task 2501(25mins)
+2. Show listings when user is admin in author page-2579(50mins)
+3.Updated the notification email(25mins)
+4. Doing 2273(1Hour)
+
+7/17
+1. email reply features bug was fixed(1Hour 25mins)
+2. Add listing form validation was done(1Hour 30mins)-2273(frontend.js-$(document).on('click', '#submit-listing-form button[type=submit]', function(e) {)

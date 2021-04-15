@@ -1,0 +1,711 @@
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 08:39:01
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Grazing To You","short":true},{"title":"User Email","value":"grazingtoyou@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 11:02:28
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"sjhuidb","short":true},{"title":"User Email","value":"cotedot193@alicdh.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 12:10:51
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Sisa","short":true},{"title":"User Email","value":"sisamlotshwa7@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 12:30:16
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"samwilliams","short":true},{"title":"User Email","value":"bevet89894@botfed.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 16:55:24
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Tahlia Wall","short":true},{"title":"User Email","value":"cofabi8113@200cai.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 19:24:08
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"MJWED","short":true},{"title":"User Email","value":"mel@melaniejaneweddingsandevents.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 22:34:48
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"thatpicnicco","short":true},{"title":"User Email","value":"Thatpicnicco@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 22:43:47
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"sugarroseteapartyhire","short":true},{"title":"User Email","value":"slandesmann@me.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 23:09:40
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"PalletPicnics","short":true},{"title":"User Email","value":"hello@palletpicnics.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 23:39:58
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"thefancyhound","short":true},{"title":"User Email","value":"thefancyhoundevents@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 31-01-2021, 23:51:22
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Jillian","short":true},{"title":"User Email","value":"jillian@showponyevents.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 00:42:35
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Rachel","short":true},{"title":"User Email","value":"rachelbgoldfinch@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 03:08:22
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Whats Poppin","short":true},{"title":"User Email","value":"Charsballoons@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 03:46:20
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Hassan","short":true},{"title":"User Email","value":"hkhalil1803@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 03:59:00
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"jamesywamsie","short":true},{"title":"User Email","value":"jamesjdounis@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 06:27:26
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"developer_veena","short":true},{"title":"User Email","value":"binarydata.sale@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 09:27:42
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"testngg","short":true},{"title":"User Email","value":"dev2.bdpl@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 09:39:08
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"jasmine.turner","short":true},{"title":"User Email","value":"jasmine.turner@live.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 09:46:15
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"KARAN","short":true},{"title":"User Email","value":"kssharma466@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 11:44:51
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"tahli.jade","short":true},{"title":"User Email","value":"tahli.jade@live.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 23:10:17
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Flora","short":true},{"title":"User Email","value":"flora.gorrick@live.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 01-02-2021, 23:47:59
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"istyleevents","short":true},{"title":"User Email","value":"istyleevents@outlook.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 01:50:29
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"xoxopartyhire@gmail.com","short":true},{"title":"User Email","value":"xoxopartyhire@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 04:37:01
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"aydansev76","short":true},{"title":"User Email","value":"aydansev76@outlook.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 07:34:04
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"testuser57@gmail.com","short":true},{"title":"User Email","value":"testuser57@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 10:58:51
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 10:58:59
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 11:01:12
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 11:01:17
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 11:03:09
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 11:03:10
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 12:29:54
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"test","short":true},{"title":"User Email","value":"testuseru57@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 21:48:29
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"michaelhireitem","short":true},{"title":"User Email","value":"michaelhireitem@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 21:50:41
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 21:50:43
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 21:50:44
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 21:50:45
+Error Code: 404
+API Response: no_active_hooks
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 02-02-2021, 23:33:24
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"balloonsbybridget","short":true},{"title":"User Email","value":"bridgetsballoons@outlook.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 03-02-2021, 00:06:56
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"emandivory","short":true},{"title":"User Email","value":"emandivory@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 05-02-2021, 03:29:26
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"SSG","short":true},{"title":"User Email","value":"ryan@somethingsweetgelato.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 05-02-2021, 10:01:33
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Azita","short":true},{"title":"User Email","value":"azita.hanssen@yahoo.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 06-02-2021, 01:06:07
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"nicole.simpsonsng","short":true},{"title":"User Email","value":"nicole.simpsonsng@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 05:18:10
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"SWolfe","short":true},{"title":"User Email","value":"saz_clancy@hotmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 10:45:41
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"ashleighksmith09","short":true},{"title":"User Email","value":"ashleighksmith09@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 18:39:20
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"adamcochran50","short":true},{"title":"User Email","value":"adamcochran73@movie.bochip.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 18:50:19
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"shellyhawthorn","short":true},{"title":"User Email","value":"shellyhawthorn25@use.marksypark.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 18:51:31
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"trentmanor9310","short":true},{"title":"User Email","value":"dyshoezodlit@outlook.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 18:52:18
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"robynhenegar35","short":true},{"title":"User Email","value":"robynhenegar18@drop.gasbin.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 19:13:20
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"fanniex061733","short":true},{"title":"User Email","value":"fanniesherwood17@back.lakemneadows.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 19:19:17
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"mellissaeverson","short":true},{"title":"User Email","value":"monicabaines195@mailcatch.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:01:32
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"janellq398822021","short":true},{"title":"User Email","value":"janellstorm@back.lakemneadows.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:01:35
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"roma35169556023","short":true},{"title":"User Email","value":"refugiocapasso5061@coolmailcool.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:15:02
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"abqwinnie6","short":true},{"title":"User Email","value":"daftarjoker7979@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:29:18
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"angelika55m","short":true},{"title":"User Email","value":"annalysesirbaughscz@yahoo.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:50:31
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"kelseyvaladez56","short":true},{"title":"User Email","value":"kelseyvaladez@tree.frequiry.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 20:51:08
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"ingeborgprosser","short":true},{"title":"User Email","value":"ingeborgprosser24@from.crossandgarlic.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 21:07:46
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"julienneholzman","short":true},{"title":"User Email","value":"margeryhardess@gay.theworkpc.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 21:10:06
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"derickoden602","short":true},{"title":"User Email","value":"gertrudaaksenova2017@mail.ru","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 07-02-2021, 21:10:35
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"lynwoodedler551","short":true},{"title":"User Email","value":"m.i.umiu99.80.0@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 08-02-2021, 00:48:59
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Zoe","short":true},{"title":"User Email","value":"zoe.platt99@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 08-02-2021, 01:48:03
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"kmorrison","short":true},{"title":"User Email","value":"keelykmorrison@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 08-02-2021, 08:16:49
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"angelananta","short":true},{"title":"User Email","value":"angelananta@hotmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 08-02-2021, 08:19:43
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"raagavi2205@gmail.com","short":true},{"title":"User Email","value":"raagavi2205@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 08-02-2021, 08:38:34
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"pranavparikh2","short":true},{"title":"User Email","value":"pranavparikh2@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 09-02-2021, 04:49:36
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"dhuwsmed","short":true},{"title":"User Email","value":"sewixah293@combcub.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 09-02-2021, 05:47:09
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"yash123","short":true},{"title":"User Email","value":"yash123@mailinator.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 10-02-2021, 03:22:29
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Botanical Booths","short":true},{"title":"User Email","value":"info@botanicalbooths.com.au","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 11-02-2021, 06:08:35
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Ana","short":true},{"title":"User Email","value":"anabayocham@hotmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 13-02-2021, 08:32:04
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Melissa","short":true},{"title":"User Email","value":"cootalottgirl@icloud.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 14-02-2021, 03:02:59
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"rinnahroque159","short":true},{"title":"User Email","value":"rinnahroque159@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 14-02-2021, 05:12:32
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"royalbooths@gmail.com","short":true},{"title":"User Email","value":"royalbooths@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 14-02-2021, 12:56:24
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"simone.davidson","short":true},{"title":"User Email","value":"simonedavidson02@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 14-02-2021, 13:08:55
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"bisy","short":true},{"title":"User Email","value":"berwickanne@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 16-02-2021, 02:30:43
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"suwatnako@yahoo.com","short":true},{"title":"User Email","value":"suwatnako@yahoo.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 16-02-2021, 12:40:02
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Sky","short":true},{"title":"User Email","value":"gavinorhona@gmail.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 16-02-2021, 18:43:44
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"testing_1","short":true},{"title":"User Email","value":"testing@fkmfkm.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 16-02-2021, 21:14:07
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","mrkdwn":true,"attachments":[{"fallback":":bust_in_silhouette: A new user just registered on <https:\/\/hypley.com|Hypley>.","color":"#2ecc71","fields":[{"title":"User Name","value":"Tiffany Hayescnn","short":true},{"title":"User Email","value":"konoyan451@donmah.com","short":true}]}],"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 17-02-2021, 11:13:53
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+
+===========================================================================
+API ERROR
+---------------------------------------------------------------------------
+Error Time: 17-02-2021, 11:14:03
+Error Code: 404
+API Response: no_service
+API Request: {"username":"hypley","icon_url":"http:\/\/hypley.com\/wp-content\/uploads\/2020\/06\/images-7.jpeg","text":":pizza: Mmmmmmm.... Pizzzzzzzzzzzzzzzzzzzzzzza!!!","mrkdwn":true,"channel":"#hypleysales"}
+===========================================================================
+

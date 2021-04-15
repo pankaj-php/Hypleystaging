@@ -1,0 +1,9 @@
+User-agent:*
+
+Disallow: /wp-admin/
+Disallow: /images/
+Disallow: /wp-content/plugins/
+Disallow: /readme.html
+Disallow: /refer/
+Disallow: /thank-you/
+Noindex: /thank-you/

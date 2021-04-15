@@ -1,0 +1,74 @@
+Install new plugin :- 
+
+Plugin Name :- Code Widget 
+
+/* Add this code in widget area for creating review widget*/
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+$template_loader = new Listeo_Core_Template_Loader;
+
+get_header(get_option('header_bar_style','standard') );
+
+$gallery_style = get_post_meta( $post->ID, '_gallery_style', true );
+
+if(empty($gallery_style)) { $gallery_style = get_option('listeo_gallery_type','top'); }
+
+$count_gallery = listeo_count_gallery_items($post->ID);
+
+if($count_gallery < 4 ){
+	$gallery_style = 'content';	
+}
+if( get_post_meta( $post->ID, '_gallery_style', true ) == 'top' && $count_gallery == 1 ) {
+	$gallery_style = 'none';	
+}
+
+if ( have_posts() ) :
+if( $gallery_style == 'top' ) :
+	$template_loader->get_template_part( 'single-partials/single-listing','gallery' );  
+else: ?>
+<!-- Gradient-->
+<div class="single-listing-page-titlebar"></div>
+<?php endif; ?>
+<?php 
+
+
+
+// 		$d = DateTime::createFromFormat('d-m-Y', $expires);
+// 		echo $d->getTimestamp(); 
+		?>
+<!-- Content
+================================================== -->
+<?php while ( have_posts() ) : the_post();  ?>
+			<!-- Titlebar -->
+		
+			<div id="titlebar" class="listing-titlebar">
+				<?php
+				if(!get_option('listeo_disable_reviews')){
+					 $rating = get_post_meta($post->ID, 'listeo-avg-rating', true); 
+						if(isset($rating) && $rating > 0 ) : 
+							$rating_type = get_option('listeo_rating_type','star');
+							if($rating_type == 'numerical') { ?>
+								<div class="numerical-rating" data-rating="<?php $rating_value = esc_attr(round($rating,1)); printf("%0.1f",$rating_value); ?>">
+							<?php } else { ?>
+								<div class="star-rating" data-rating="<?php echo $rating; ?>">
+							<?php } ?>
+							<?php $number = listeo_get_reviews_number($post->ID);  ?>
+							<div class="rating-counter"><a href="#listing-reviews">(<?php printf( _n( '%s review', '%s reviews', $number,'listeo_core' ), number_format_i18n( $number ) );  ?>)</a></div>
+						</div>
+					<?php endif; 
+				}?>
+
+			<?php if(!get_option('listeo_disable_reviews')){ 
+				$template_loader->get_template_part( 'single-partials/single-listing','reviews' ); } ?>
+			
+		</div>
+	
+		<?php endwhile; // End of the loop. ?>
+
+<?php else : ?>
+
+<?php get_template_part( 'content', 'none' ); ?>
+
+<?php endif; ?>

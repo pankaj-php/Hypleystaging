@@ -1,0 +1,537 @@
+.logged-in .mmenu-trigger {
+  display: none !important;
+}
+.right-side a.button.border.with-icon {
+  display: none;
+}
+#navigation.style-1 {
+  float: right;
+}
+.listing-item-content .tag {
+  display: none;
+}
+.star-rating .rating-counter {
+  display: block;
+}
+.single_listing_description {
+  padding-right: 5px;
+  margin-top: 4px;
+  height: 13px;
+  overflow: hidden;
+  line-height: 15px;
+  padding: px;
+  width: 111%;
+  font-size: 12px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.listeo_grid_view_item h3.listeo_single_list_title.listo-hed-h3-new {
+  font-size: 22px !important;
+  width: 55% !important;
+}
+.listeo_grid_view_item h3.listeo_single_list_title.listo-hed-h3-new.full_width {
+  width: 100% !important;
+}
+
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect {
+  width: 50% !important;
+  display: inline-block;
+}
+#cristian_date_picker-panel .panel-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  position: initial;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 100% !important;
+  max-width: 100%;
+  pointer-events: all !important;
+}
+#cristian_date_picker-panel a {
+  display: none;
+}
+#cristian_date_picker-panel .col-md-12 {
+  padding: 0 5px;
+}
+/* searcg form ----when? */
+#cristian_date_picker-panel {
+  width: 49% !important;
+  position: absolute;
+  top: -69px;
+  left: 50%;
+}
+.row.with-forms .col-fs-6.location {
+  width: 50% !important;
+}
+.user-menu li i {
+  display: none !important;
+}
+.wpb_wrapper .row.margin-bottom-25 {
+  display: none;
+}
+.sort-by a.chosen-single {
+  background: white !important;
+  height: 34px !important;
+  line-height: 32px;
+}
+.sort-by .chosen-container-single .chosen-single span {
+  font-size: 14px;
+  font-family: raleway;
+}
+.sort-by .chosen-container-single a.chosen-single:hover {
+  background: #f3f3f3 !important;
+}
+.sort-by .chosen-container-single.chosen-container-active a.chosen-single {
+  background: #f65a5f !important;
+}
+.sort-by .chosen-container-single.chosen-container-active a.chosen-single span {
+  color: white;
+}
+.sort-by
+  .chosen-container-single.chosen-container-active
+  a.chosen-single
+  div:after {
+  color: white;
+}
+.star-rating .rating-counter {
+  display: block !important;
+  color: black;
+  padding-left: 2px;
+  font-weight: 400;
+}
+.listeo_grid_view_item .star-rating.listo-new-star-rating h6 {
+  margin-bottom: 3px !important;
+  margin-right: 0 !important;
+}
+.listing-item-content.listo-new-listing-iteam .star-rating {
+  padding-right: 8px !important;
+}
+.slick-slide {
+  visibility: hidden;
+}
+.slick-slide.slick-current.slick-active {
+  visibility: visible !important;
+}
+.cristian_more_filter {
+  width: 98%;
+  margin: 0 1%;
+  padding: 5px;
+  background: white;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  padding-left: 10px;
+}
+.cristian_more_filter:before {
+  content: "\f1de";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #66676b;
+  font-weight: 500;
+  padding-left: 0;
+  transition: all 0.3s;
+  margin-right: 10px;
+  display: inline-block;
+}
+.cristian_more_filter_modal {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  background-color: #ccc;
+  width: 100%;
+  height: 100%;
+}
+.cristian_more_filter_modal .modal_container {
+  width: 98%;
+  height: 98%;
+  margin: 1%;
+  box-shadow: 0px 5px 5px 5px grey;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+  overflow: scroll;
+}
+.cristian_more_filter_modal .modal_head {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.cristian_more_filter_modal .modal_close:before {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  font-size: 22px;
+  display: inline-block;
+}
+.cristian_more_filter_modal .modal_close {
+  border: none;
+  background: white;
+  position: absolute;
+  right: 0%;
+  top: 0px;
+}
+.cristian_more_filter_modal .panel-dropdown .panel-dropdown-content,
+.cristian_more_filter_modal .chosen-container-single .chosen-drop {
+  opacity: 1;
+  visibility: visible;
+  position: unset;
+  border: none;
+  box-shadow: none;
+}
+.cristian_more_filter_modal .panel-dropdown > a {
+  color: black;
+  font-weight: 600;
+  font-size: 18px !important;
+  background: white !important;
+}
+.cristian_more_filter_modal .panel-buttons,
+.cristian_more_filter_modal .panel-dropdown a:after {
+  display: none;
+}
+.cristian_more_filter_modal .modal_apply {
+  margin: 10px 25%;
+  width: 50%;
+  background: #f65a5f;
+  color: white;
+  box-shadow: none;
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+.cristian_more_filter_modal .modal_apply:hover {
+  background: #fa7779;
+}
+a.button.border {
+  display: none;
+}
+.cristian_more_filter_modal .modal_info {
+  margin-top: 10px;
+}
+.modal_info_tag {
+  background: #ddd;
+  margin: 6px;
+  padding: 1px 10px;
+  display: inline-block;
+  border-radius: 15px;
+  text-transform: capitalize;
+}
+span.close_modal_info_tag:hover {
+  color: #fa7779;
+  cursor: pointer;
+}
+span.close_modal_info_tag:after {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.listing-item.listo-list-iteam {
+  height: auto !important;
+}
+.form-field-_price_min-container * {
+  display: inline-block;
+}
+.label-_price_min {
+  width: 250px;
+}
+#_price_min {
+  width: 300px;
+  display: inline-block;
+}
+.add-listing-section input::-webkit-outer-spin-button,
+.add-listing-section input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cd-switch .switch {
+  left: 90px;
+}
+
+.booking-estimated-cost {
+  display: block !important;
+}
+.modal_footer {
+  position: fixed;
+  bottom: 1%;
+  height: 100px;
+  width: 98%;
+  border-top: 1px solid #ddd;
+  z-index: 99999;
+  left: 1%;
+  background: white;
+  padding-top: 20px;
+}
+.modal_body form#listeo_core-search-form {
+  padding-bottom: 100px;
+}
+.not_found_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00000077;
+  z-index: 1111;
+  animation: cristianAnimation 0s 5s forwards;
+  opacity: 0;
+}
+.not_found_iframe {
+  width: 90%;
+  height: 70%;
+  top: 25%;
+  position: relative;
+  left: 5%;
+}
+#listing-overview .listing-links-container {
+  display: none;
+}
+.comment-content .star-rating {
+  height: auto !important;
+}
+.bookmarks_num {
+  font-size: 12px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 10px;
+}
+/* for feed page do not show description, slide button... */
+#post-56 .listing-item-content.listo-new-listing-iteam,
+#post-56 .listing-small-badge.pricing-badge.listo-new-badge,
+#post-56 .listeo_cat_page_silder button.slick-prev.slick-arrow,
+#post-56 .listeo_cat_page_silder button.slick-next.slick-arrow,
+#post-56 .layout-switcher,
+#post-56 .main-search-input button.button {
+  display: none !important;
+}
+#post-56 .listing-item.listo-list-iteam {
+  padding-bottom: 0;
+}
+#post-56 .bookmarks_num {
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  right: 50px;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.fs-inner-container.content.faded-out .listings-container {
+  opacity: 1 !important;
+}
+.delete.listeo_core-dashboard-action-delete,
+#listing-nav {
+  display: none;
+}
+
+/* 0~1024px */
+@media (max-width: 1024px) {
+  .right-side {
+    width: auto;
+    display: inline-block;
+    margin-top: -65px;
+    position: relative;
+    right: 75px;
+  }
+  .header-widget {
+    padding: 0;
+    border-top: none;
+  }
+  .user-menu {
+    height: 50px;
+    margin: 25px 0 20px;
+  }
+  .user-menu ul {
+    width: 200px !important;
+    left: -40px;
+  }
+  .logged-in .right-side {
+    margin-right: -70px;
+  }
+  .sort-by a.chosen-single {
+    background: white !important;
+  }
+  .sort-by a.chosen-single {
+    background: #f3f3f3 !important;
+  }
+}
+@media (max-width: 990px) {
+  #cristian_date_picker-panel {
+    top: -79px;
+  }
+}
+@media (max-width: 900px) {
+  #cristian_date_picker-panel {
+    top: -74px;
+  }
+}
+@media (max-width: 767px) {
+  #cristian_date_picker-panel {
+    top: -69px;
+  }
+}
+@media (max-width: 600px) {
+  .single_listing_description {
+    height: 18px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+  }
+  #listeo-listings-container .col-sm-6,
+  #listeo-listings-container .col-xs-6 {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .listeo_cat_page_silder img,
+  .listeo_liting_single_galary_image.listeo_liting_single_image,
+  .listing-item.listeo_grid_view_item.listo-list-iteam img {
+    height: 40vw !important;
+  }
+  .listeo_grid_view_item h3.listeo_single_list_title.listo-hed-h3-new {
+    font-size: 15px !important;
+    padding-bottom: 0;
+  }
+  /* searcg form ----when? */
+  #cristian_date_picker-panel {
+    width: 100% !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+  }
+  .row.with-forms .col-fs-6.location {
+    width: 100% !important;
+  }
+  .wpb_wrapper .row.margin-bottom-25 {
+    display: none;
+  }
+  .star-rating.listo-new-star-rating *,
+  .star-rating .star:before {
+    font-size: 10px !important;
+  }
+  .listing-item-content.listo-new-listing-iteam .star-rating {
+    padding-right: 3px !important;
+  }
+  span.like-icon {
+    line-height: 10px !important;
+    font-size: 10px !important;
+    height: 25px !important;
+    width: 25px !important;
+  }
+  .listeo_grid_view_item .listing-small-badge.pricing-badge.listo-new-badge {
+    font-size: 14px !important;
+  }
+  
+  
+  .sort-by .sort-by-select,
+  .panel-dropdown {
+    float: none;
+    margin-top: 10px;
+  }
+  .search #tax-listing_feature-panel,
+  .search #_price-panel,
+  .search #tax-listing_category-panel,
+  .cristian_more_filter_modal .row.with-forms,
+  .cristian_more_filter_modal #cristian_date_picker-panel,
+  .cristian_more_filter_modal .cristian_more_filter {
+    display: none;
+  }
+  .cristian_more_filter_modal #tax-listing_feature-panel,
+  .cristian_more_filter_modal #_price-panel,
+  .cristian_more_filter_modal #tax-listing_category-panel {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: block !important;
+  }
+  .cristian_more_filter_modal #_price-panel {
+    border-bottom: none;
+  }
+  .sort-by {
+    display: none !important;
+  }
+  span.slider-disable {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 	.user-menu{
+		left:-50px;
+	} */
+  .sign-in.popup-with-zoom-anim.new-signin:nth-child(2) {
+    display: none;
+  }
+  .logged-in .right-side {
+    margin-top: -55px;
+  }
+}
+@media (max-width: 380px) {
+  .logged-in .right-side {
+    margin-top: -5px;
+  }
+  .user-menu ul {
+    width: 200px !important;
+    left: -160px;
+  }
+}
+@media (min-width: 1240px) {
+  body.full-width-header .left-side {
+    width: calc(100% - 200px);
+  }
+  body.full-width-header .right-side {
+    width: 200px;
+  }
+}
+@media (max-width: 1399px) and (min-width: 1009px) {
+  .fs-container .fs-inner-container.content {
+    padding-top: 85px !important;
+  }
+  #navigation.style-1 {
+    display: none;
+  }
+}
+@media (max-width: 1239px) and (min-width: 1025px) {
+  .right-side {
+    margin-top: -35px;
+  }
+}
+@keyframes cristianAnimation {
+  to {
+    opacity: 1;
+  }
+}
+/*  */
+
+/* 12-10-20 */
+
+.boxed-widget {
+  overflow: auto;
+}
+
+.messages-container-inner .message-content {
+  height: auto;
+}
+
+.my_widget1 {
+  overflow: auto;
+}
+
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.row:after,
+.row:before {
+  display: -webkit-box;
+}
+/*---------------------------------*/

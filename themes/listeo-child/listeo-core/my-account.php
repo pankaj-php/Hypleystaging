@@ -3,13 +3,13 @@
 global $wp_roles;
 $current_user = wp_get_current_user();
 $roles = $current_user->roles;
-$role = array_shift( $roles );
-$template_loader = new Listeo_Core_Template_Loader;
+$role = array_shift( $roles ); 
+$template_loader = new Listeo_Core_Template_Loader; 
 
-if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
-	<div class="notification success closeable margin-bottom-35"><p><?php esc_html_e('Your profile has been updated.', 'listeo_core'); ?></p><a class="close" href="#"></a></div>
+if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?> 
+	<div class="notification success closeable margin-bottom-35"><p><?php esc_html_e('Your profile has been updated.', 'listeo_core'); ?></p><a class="close" href="#"></a></div> 
 <?php endif; ?>
-
+     
 
 <?php if ( !is_user_logged_in() ) : ?>
     <p class="warning">
@@ -25,32 +25,30 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 				<h4 class="gray"><?php esc_html_e('Profile Details','listeo_core') ?></h4>
 				<form method="post" id="edit_user" action="<?php the_permalink(); ?>">
 				<div class="dashboard-list-box-static">
-
-					<?php
+					
+					<?php 
 					$custom_avatar = $current_user->listeo_core_avatar_id;
-					$custom_avatar = wp_get_attachment_url($custom_avatar);
+					$custom_avatar = wp_get_attachment_url($custom_avatar); 
 					if(!empty($custom_avatar)) { ?>
-					<div
-					data-photo="<?php echo $custom_avatar; ?>"
-					data-name="<?php esc_html_e('Your Avatar', 'listeo_core'); ?>"
-					data-size="<?php echo filesize( get_attached_file( $current_user->listeo_core_avatar_id ) ); ?>"
+					<div 
+					data-photo="<?php echo $custom_avatar; ?>" 
+					data-name="<?php esc_html_e('Your Avatar', 'listeo_core'); ?>" 
+					data-size="<?php echo filesize( get_attached_file( $current_user->listeo_core_avatar_id ) ); ?>" 
 					class="edit-profile-photo">
-
+					
 					<?php } else { ?>
 					<div class="edit-profile-photo">
 					<?php } ?>
 
-
-						<div class="dropzone hidden" ></div>
 						<div id="avatar-uploader" class="dropzone">
 							<div class="dz-message" data-dz-message><span><?php esc_html_e('Upload Avatar', 'listeo_core'); ?></span></div>
 						</div>
 						<input class="hidden" name="listeo_core_avatar_id" type="text" id="avatar-uploader-id" value="<?php echo $current_user->listeo_core_avatar_id; ?>" />
 					</div>
-
+		
 					<!-- Details -->
 					<div class="my-profile">
-
+							
 							<?php if(get_option('listeo_profile_allow_role_change')): ?>
 								<?php if(in_array($role, array('owner','guest'))): ?>
 									<label for="role"><?php esc_html_e('Change your role', 'listeo_core'); ?></label>
@@ -60,17 +58,17 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 									</select>
 								<?php endif; ?>
 							<?php endif; ?>
-
+							
 						  	<label for="first-name"><?php esc_html_e('First Name', 'listeo_core'); ?></label>
 			                <input class="text-input" name="first-name" type="text" id="first-name" value="<?php  echo $current_user->user_firstname; ?>" />
-
+						  	
 						  	<label for="last-name"><?php esc_html_e('Last Name', 'listeo_core'); ?></label>
 			                <input class="text-input" name="last-name" type="text" id="last-name" value="<?php echo $current_user->user_lastname; ?>" />
 
 							<label for="phone"><?php esc_html_e('Phone', 'listeo_core'); ?></label>
 							<input class="text-input" name="phone" type="text" id="phone" value="<?php echo $current_user->phone; ?>" type="text">
-
-							<?php  if ( isset($_GET['user_err_pass']) && !empty($_GET['user_err_pass'])  ) : ?>
+							
+							<?php  if ( isset($_GET['user_err_pass']) && !empty($_GET['user_err_pass'])  ) : ?> 
 							<div class="notification error closeable margin-top-35"><p>
 								<?php
 								switch ($_GET['user_err_pass']) {
@@ -79,22 +77,22 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 								 		break;
 								 	case 'error_2':
 								 		echo esc_html_e('This email is already used by another user, please try a different one.','listeo_core');
-								 		break;
-
-
+								 		break;					 	
+								 	
+								 	
 								 	default:
 								 		# code...
 								 		break;
 								 }  ?>
-
+									
 								</p><a class="close" href="#"></a>
-							</div>
+							</div> 
 							<?php endif; ?>
 							<label for="email"><?php esc_html_e('E-mail', 'listeo_core'); ?></label>
 			                <input class="text-input" name="email" type="text" id="email" value="<?php the_author_meta( 'user_email', $current_user->ID ); ?>" />
-
+			                 
 							<label for="description"><?php esc_html_e('About me', 'listeo_core'); ?></label>
-			               	<?php
+			               	<?php 
 								$user_desc = get_the_author_meta( 'description' , $current_user->ID);
 								$user_desc_stripped = strip_tags($user_desc, '<p>'); //replace <p> and <a> with whatever tags you want to keep after the strip
 							?>
@@ -126,18 +124,18 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 
 							<input type="hidden" name="my-account-submission" value="1" />
 							<button type="submit" form="edit_user" value="<?php esc_html_e( 'Submit', 'listeo_core' ); ?>" class="button margin-top-20 margin-bottom-20"><?php esc_html_e('Save Changes', 'listeo_core'); ?></button>
-
+					
 						<?php endif; ?>
+					
 
-
-
+					
 				</div>
-
-
+	
+						
 					</div>
 				</div>
 			</div>
-
+		
 
 		</form>
 		<!-- Change Password -->
@@ -155,11 +153,11 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 									</div>
 								</div>
 							</div>
-							<?php if ( isset($_GET['updated_pass']) && $_GET['updated_pass'] == 'true' ) : ?>
-								<div class="notification success closeable margin-bottom-35"><p><?php esc_html_e('Your password has been updated.', 'listeo_core'); ?></p><a class="close" href="#"></a></div>
+							<?php if ( isset($_GET['updated_pass']) && $_GET['updated_pass'] == 'true' ) : ?> 
+								<div class="notification success closeable margin-bottom-35"><p><?php esc_html_e('Your password has been updated.', 'listeo_core'); ?></p><a class="close" href="#"></a></div> 
 							<?php endif; ?>
 
-							<?php  if ( isset($_GET['err_pass']) && !empty($_GET['err_pass'])  ) : ?>
+							<?php  if ( isset($_GET['err_pass']) && !empty($_GET['err_pass'])  ) : ?> 
 							<div class="notification error closeable margin-bottom-35"><p>
 								<?php
 								switch ($_GET['err_pass']) {
@@ -168,24 +166,24 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 								 		break;
 								 	case 'error_2':
 								 		echo esc_html_e('The passwords do not match. Please retry..','listeo_core');
-								 		break;
+								 		break;					 	
 								 	case 'error_3':
 								 		echo esc_html_e('A bit short as a password, don\'t you think?','listeo_core');
-								 		break;
+								 		break;					 	
 								 	case 'error_4':
 								 		echo esc_html_e('Password may not contain the character "\\" (backslash).','listeo_core');
 								 		break;
 								 	case 'error_5':
 								 		echo esc_html_e('An error occurred while updating your profile. Please retry.','listeo_core');
 								 		break;
-
+								 	
 								 	default:
 								 		# code...
 								 		break;
 								 }  ?>
-
+									
 								</p><a class="close" href="#"></a>
-							</div>
+							</div> 
 							<?php endif; ?>
 							<form name="resetpasswordform" action="" method="post">
 								<label><?php esc_html_e('Current Password','listeo_core'); ?></label>
@@ -198,12 +196,12 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 								<input name="pass2" type="password">
 
 								<input type="submit" name="wp-submit" id="wp-submit" class="margin-top-20 button" value="<?php esc_html_e('Save Changes','listeo_core'); ?>" />
-
+								
 								<input type="hidden" name="listeo_core-password-change" value="1" />
 							</form>
 
 						</div>
-
+						
 					</div>
 				</div>
 			</div>
@@ -220,3 +218,4 @@ if ( isset($_GET['updated']) && $_GET['updated'] == 'true' ) : ?>
 
 		</div>
 
+		

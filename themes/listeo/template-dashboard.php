@@ -143,42 +143,7 @@ if ( isset( $_REQUEST['register-errors'] ) ) {
 					</div>
 				</div>
 
-<!--
-				<div class="col-lg-5 col-md-4 col-md-offset-3 sign-in-form style-1 margin-bottom-45">
-					<?php if ( count( $errors ) > 0 ) : ?>
-					    <?php foreach ( $errors  as $error ) : ?>
-					        <div class="notification error closeable">
-								<p><?php echo ($error); ?></p>
-								<a class="close"></a>
-							</div>
-					    <?php endforeach; ?>
-					<?php endif; ?>
-					<?php if ( isset( $_REQUEST['registered'] ) ) : ?>
-				    <div class="notification success closeable">
-				    <p>
-				        <?php
-				        $password_field = get_option('listeo_display_password_field');
-				        if($password_field) {
-							printf(
-				                esc_html__( 'You have successfully registered to %s.', 'listeo' ),
-				                '<strong>'.get_bloginfo( 'name' ).'</strong>'
-				            );
-				        } else {
-				        	printf(
-				                esc_html__( 'You have successfully registered to <strong>%s</strong>. We have emailed your password to the email address you entered.', 'listeo' ),
-				                '<strong>'.get_bloginfo( 'name' ).'</strong>'
-				            );
-				        }
-
-				        ?>
-				    </p></div>
-				<?php endif; ?>
-					<?php  do_action('listeo_login_form');	 ?>
-				</div> -->
-
-
-
-				</article>
+			</article>
 
 			<?php if($layout !="full-width") { ?>
 				<div class="col-lg-3 col-md-4">

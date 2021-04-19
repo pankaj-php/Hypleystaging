@@ -13,7 +13,7 @@
 get_header();
 
 ?>
- 
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -21,29 +21,45 @@ get_header();
 	<div class="entry-content">
 		<?php
 		if(isset($_GET['key']) && isset($_GET['user_id']) ){
-		   
+
 		    $code = get_user_meta($_GET['user_id'],'activation_code', true);
-		    
+
 		    if($code == $_GET['key']){
 		        global $wpdb;
 		        $user_table_name = $wpdb->prefix.'users';
-		        $wpdb->update( 
+		        $wpdb->update(
 			    $user_table_name,
 			     	array( 'user_status' => 1),
 			     	array( 'ID' =>    $_GET['user_id'],
 			       	'user_activation_key'=>$_GET['key']
-			     	), 
+			     	),
 			     	array( '%d')
 				);
-				
+
 		        // update the user meta
 		        update_user_meta($_GET['user_id'], 'account_activated', 1);
-		    	//echo '<h5>Your email address has been activated!</h5>';
-		    	// echo '<div style="margin-top:5%;margin-bottom:5%">
-				// 	<h5 style="text-align: center;font-size: 18px;">Your email address has been activated!</h5>
-				// </div>';
-				header('Location: https://hypley.com/?open=signInDialog');
-				exit();
+
+					echo '<div class="text-center mt-5">';
+					echo '<div style="margin-top:5%;margin-bottom:5%">
+						<h5 style="text-align: center;font-size: 18px;">Your email address has been activated!</h5>
+					</div>';
+
+					echo '</div>';
+
+					?>
+						<script>
+							jQuery(document).ready(function(){
+								setTimeout(window.location.replace("<?php echo get_home_url(); ?>#sign-in-dialog"), 1000);
+							})
+						</script>
+
+					<?php
+
+
+
+
+				//header('Location: https://hypley.com/?open=signInDialog');
+				//exit();
 		    }
 		}
 		?>
@@ -52,7 +68,7 @@ get_header();
 		<?php //listeo_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article>
-<?php 
+<?php
 get_footer();
- 
+
 ?>

@@ -40,7 +40,7 @@ section.fullwidth .listing-item-container,
 .listing-item-content {
     bottom: -50px;
     padding:0;
-    display:flex; 
+    display:flex;
     padding-left: 10px;
 }
 .star-rating {
@@ -90,14 +90,14 @@ a.listing-item-container.listing-geo-data {
 .listing-item-container .star-rating {
     padding-left: 86%;
     padding-right: 0;
-    padding-top:15px;   
-    padding-right: 0;    
+    padding-top:15px;
+    padding-right: 0;
     font-size: 15px;
     color: #000;
     font-weight: bold;
     line-height: 22px;
-    
-    
+
+
 }
 .star-rating .rating-counter{
     display:none;
@@ -147,7 +147,7 @@ a.chosen-single {
     right: 0 !important;
     margin: auto;
     box-shadow : unset !important;
-    
+
 }
 .user-profile-name{
     position: unset !important;
@@ -172,7 +172,7 @@ a.chosen-single {
 a.new-btn-class{
     border:2px solid #ccc;
     background-color: unset;
-    
+
 }
 .main-btn-new{
     width:100%;
@@ -204,7 +204,7 @@ a.new-btn-class{
 }
 .new-logo-sec img{
     width: 100% !important;
-    height: auto !important;    
+    height: auto !important;
 }
 .new-list-provider-name a h4{
         margin-top: 15px;
@@ -333,7 +333,7 @@ div#widget_listing_owner-4 {
 }
 @media(min-width:1400px) and (max-width:1600px){
     .listing-item-container .star-rating {
-    padding-left: 65%; 
+    padding-left: 65%;
     }
     .listing-small-badge{
         top:130px;
@@ -352,7 +352,7 @@ div#widget_listing_owner-4 {
 }
 @media(min-width:1260px) and (max-width:1399px){
     .listing-item-container .star-rating {
-    padding-left: 65%; 
+    padding-left: 65%;
     }
     .listing-small-badge{
         top:130px;
@@ -562,7 +562,7 @@ div#widget_listing_owner-4 {
 
     /*messages*/
     .messages-inbox ul li a{padding: 15px 0px;}
-    
+
 }
 
 @media(max-width:1024px){
@@ -632,7 +632,7 @@ div#widget_listing_owner-4 {
     .user_not_logged_in .header-widget a.sign-in {
     padding: 5px 15px;
         top: 3px;
-}   
+}
 }
 @media(max-width:991px){
     .fullwidth-filters {
@@ -694,7 +694,7 @@ div#widget_listing_owner-4 {
         }
 }
 @media(max-width:410px){
-    
+
     .star-rating.listo-new-star-rating span.star{
         width:83%;
     }
@@ -705,7 +705,7 @@ div#widget_listing_owner-4 {
     margin-left: 5%;
 }
 span.like-icon{
-     bottom: -125px;    
+     bottom: -125px;
 }
 .listing-small-badge{
      top: 133px;
@@ -717,16 +717,16 @@ span.like-icon{
     .listeo_grid_view_item .user-menu ul{width: 280px;}
     .listo-bookmark-icon-new{bottom: 20px;}
     /*bookmarks*/
-    
+
     .list-box-listing-img a{width: 100%;}
     .list-box-listing-img{max-width: 100%;}
     .list-box-listing{display: block;}
 span.like-icon{
-     bottom: -125px;    
+     bottom: -125px;
 }
 .listing-small-badge{
      top: 133px;
-}   
+}
 }
 @media(max-width:328px) and (min-width:320px)
 {
@@ -956,7 +956,7 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
     display: block;
 }
 .message-bubble .message-text .view-attachment .message-attachment .download-image img {
-    position: relative;  
+    position: relative;
      object-fit: cover;
     width: 100%;
     height: 100%;
@@ -1484,7 +1484,7 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
 .message-bubbles .message-bubble.me .message-text{
     color:black !important;
     background:#f6f6f6 !important;
-    
+
 }
 .message-bubbles .message-bubble.me .message-text:before {
     color:#f6f6f6 !important;
@@ -1691,7 +1691,7 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
 .listeo_cat_page_silder .slick-slide{
   visibility: visible !important;
 }
- 
+
 
 
 .chosen-choices .search-choice{
@@ -1728,16 +1728,16 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
 }*/
 
 .message-content .message-text{
-  flex-wrap: wrap !important; 
+  flex-wrap: wrap !important;
 }
 
 .message-content .message-text p{
-  margin-top: 20px !important; 
-  line-height: 25px !important; 
+  margin-top: 20px !important;
+  line-height: 25px !important;
 }
 
 .message-content .message-text p:first-child{
-  margin-top: 0px !important; 
+  margin-top: 0px !important;
 }
 
 .listeo_message_listing .listeo_message_main{
@@ -1746,11 +1746,11 @@ div#listeo-listings-container .col-lg-12.col-md-12 .listing-item-container.list-
 }
 
 .listeo_message_listing .listeo_message_main p{
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
 .listeo_message_listing .listeo_message_main p:first-child{
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 #unverify_listing_msg_btn{
@@ -1922,14 +1922,14 @@ button#get-quote-btn:hover {
         top: 5px;
         left: 5px;
         font-size: 12px !important;
-  } 
+  }
   .listeo-featured-listing-box-listview{
     padding: 0px 5px 0px 5px !important;
     top: -5px;
     left: -5px;
     font-size: 12px !important;
-  }     
- .get-quote-btn{ 
+  }
+ .get-quote-btn{
         background-color: #f65a5f !important;
     color: #FFE !important;
     font-size: 26px !important;
@@ -1948,5 +1948,103 @@ button#get-quote-btn:hover {
   	padding-left: 20px;
   	padding-right: 20px;
   }
+}
+
+
+
+
+
+/* -----chat icon------ */
+/* Chat Icon */
+span.cm-chat-icon {
+    font-size: 18px;
+    position: absolute;
+    z-index: 101;
+    line-height: 18px;
+    right: 50px;
+    bottom: 30px;
+    cursor: normal;
+    display: block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    background-color: rgb(148 148 157 / 0.08);
+    color: #0bee0f;
+
+  }
+
+  .cm-chat-icon:before,
+  .cm-chat-icon:after {
+    transition: opacity 0.3s, transform 0.4s cubic-bezier(0, -0.41, 0.19, 2.5);
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 9px;
+  }
+
+  .cm-chat-icon:before {
+    content: "\f27a";
+    transform: scale(0.95);
+  }
+
+  .cm-chat-icon:after {
+    content: "\f004";
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  .cm-chat-icon.liked:after {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+
+  .cm-chat-icon:hover,
+  .cm-chat-icon.liked {
+    background-color: #0bee0f;
+    color: #fff;
+  }
+
+  .cm-chat-icon.liked:before {
+    opacity: 0;
+  }
+
+
+
+  .chat-dialog{
+    background: #fff;
+    padding: 40px;
+    padding-top: 0;
+    text-align: left;
+    max-width: 610px;
+    margin: 40px auto;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.chat-dialog .mfp-close {
+    color: #666;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+    top: 28px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.chat-dialog  .mfp-close::after,
+.chat-dialog  .mfp-close::before {
+    top: 4px;
+    height: 9px;
+    font-size: 21px;
+    transition: 0s;
+}
+
+
+.send-message-from-widget .notification {
+    display: none;
 }
 

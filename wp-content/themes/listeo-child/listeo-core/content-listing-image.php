@@ -1,12 +1,7 @@
 <?php 	
 
 if(has_post_thumbnail()){ 
-	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'listeo-listing-grid');
-	?>
-		<a target="_blank" href="<?php echo esc_url(get_post_permalink($id)); ?>">
-			<img class="listeo_liting_single_galary_image listeo_liting_single_image" src="<?php echo esc_attr($featured_img_url); ?>" alt="">
-		</a>
-	<?php
+	the_post_thumbnail('listeo-listing-grid'); 
 } 
 else { 	
 	$gallery = (array) get_post_meta( $id, '_gallery', true );

@@ -1,13 +1,11 @@
-<?php
+<?php 
 add_action( 'wp_enqueue_scripts', 'listeo_enqueue_styles');
 function listeo_enqueue_styles() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css',array('bootstrap','listeo-icons','listeo-woocommerce') );
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css',array('bootstrap','listeo-icons','listeo-woocommerce') ); 
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/css/cristian_style.css');
     //wp_enqueue_style( 'child-style-2', get_stylesheet_directory_uri() . '/css/sahil_style.css');
-
-}
-
-
+    
+} 
 // add_action( 'wp_enqueue_scripts', 'listeo_cristian_behind_scripts', 9999);
 add_action( 'wp_head', 'listeo_cristian_behind_scripts', 9999);
 function listeo_cristian_behind_scripts() {
@@ -16,23 +14,18 @@ function listeo_cristian_behind_scripts() {
     //wp_deregister_script('listeo_core-frontend');
     //wp_register_script( 'listeo_core-frontend', get_stylesheet_directory_uri() . '/js/frontend.js', array( 'jquery' ));
 	//wp_enqueue_script('listeo_core-frontend');
-
+    
 	// wp_dequeue_script('daterangerpicker');
  //    wp_deregister_script('daterangerpicker');
     // wp_register_script( 'daterangerpicker', 'https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js', array( 'jquery','moment' ) );
-	// wp_enqueue_script('daterangerpicker');
-
+	// wp_enqueue_script('daterangerpicker');  
+    
 	wp_register_script( 'cristian_script', get_stylesheet_directory_uri() . '/js/cristian_script.js', array( 'jquery' ));
-	wp_register_script( 'counterup', get_stylesheet_directory_uri() . '/js/counterup.js', array( 'jquery' ));
-	wp_register_script( 'cm_scripts', get_stylesheet_directory_uri() . '/js/cm_scripts.js', array( 'jquery' ), time());
-
 	wp_enqueue_script('cristian_script');
-	wp_enqueue_script('counterup');
-	wp_enqueue_script('cm_scripts');
-}
+} 
 
 function remove_parent_theme_features() {
-
+   	
 }
 add_action( 'after_setup_theme', 'remove_parent_theme_features', 10 );
 
@@ -42,18 +35,18 @@ function listing_category_slider(){
 	    'hide_empty' => false,
 	) );
 	$html  = '<link rel="stylesheet" href="'.site_url() . '/wp-content/themes/listeo-child/css/flexslider.css"/>
-				<script type="text/javascript" src="'.site_url(). '/wp-content/themes/listeo-child/js/jquery.flexslider-min.js"></script>
+				<script type="text/javascript" src="'.site_url(). '/wp-content/themes/listeo-child/js/jquery.flexslider-min.js"></script>	
 	<div class="flexslider">
   			<ul class="slides">';
 	foreach ($termArray as $singleTerm) {
 		$metaData = get_term_meta($singleTerm->term_id);
 		$coverImageID = $metaData['_cover'][0];
 		$coverImage = wp_get_attachment_image_src($coverImageID, array('784','500'));
-		if ($coverImage) :
-			$html .='<li><img src="'.$coverImage[0].'" /></li>';
-		endif;
+		if ($coverImage) : 
+			$html .='<li><img src="'.$coverImage[0].'" /></li>';		
+		endif; 
 	}
-
+	
 	$html .='</ul></div>';
 	$html .= '<script>
 jQuery(window).load(function() {
@@ -66,7 +59,7 @@ jQuery(window).load(function() {
 }
 add_shortcode( 'listing-category', 'listing_category_slider' );
 if (!is_admin()) {
-    add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+    add_filter( 'script_loader_tag', function ( $tag, $handle ) {    
               if ( strpos( $tag, "jquery-migrate.min.js" ) || strpos( $tag, "jquery.min.js") ) {
             return $tag;
         }
@@ -76,13 +69,13 @@ if (!is_admin()) {
 }
 
 function mz_footer(){
-
+	
 	if(isset($_GET['page_id']) && $_GET['page_id'] == 71){
-
+		
 	?>
 
 	<script>
-
+		
 		jQuery(document).ready(function(){
 
 			setTimeout(function(){
@@ -96,7 +89,7 @@ function mz_footer(){
 	</script>
 
 <?php
-
+		
 	}
 
 	if(is_page(66)){
@@ -104,8 +97,8 @@ function mz_footer(){
 	    <script>
 	        jQuery(document).ready(function() {
 	        	if(jQuery(".message-content").length){
-				    jQuery(".message-content").animate({
-				        scrollTop: jQuery('.message-content').get(0).scrollHeight
+				    jQuery(".message-content").animate({ 
+				        scrollTop: jQuery('.message-content').get(0).scrollHeight 
 				    }, 2000);
 				}
 			});
@@ -154,13 +147,3 @@ add_action("widgets_init","register_unveryfie_siderbar");
 //     return 2628000;
 // }
 // add_filter( 'auth_cookie_expiration', 'wcs_users_logged_in_longer' );
-
-
-
-/**
- * Load Core User Class.
- */
-//require_once( get_stylesheet_directory(). '/inc/hypley-modify-listeo-core-users.php' );
-
-
-

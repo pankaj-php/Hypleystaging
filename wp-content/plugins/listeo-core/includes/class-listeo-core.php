@@ -84,7 +84,7 @@ class Listeo_Core {
 	 */
 	public function __construct ( $file = '', $version = '1.2.2' ) {
 		$this->_version = $version;
-		
+
 		$this->_token = 'listeo_core';
 
 		// Load plugin environment variables
@@ -99,9 +99,9 @@ class Listeo_Core {
 
 		define( 'LISTEO_CORE_ASSETS_DIR', trailingslashit( $this->dir ) . 'assets' );
 		define( 'LISTEO_CORE_ASSETS_URL', esc_url( trailingslashit( plugins_url( '/assets/', $this->file ) ) ) );
-		
 
-		
+
+
 		include( 'class-listeo-core-post-types.php' );
 		include( 'class-listeo-core-meta-boxes.php' );
 		include( 'class-listeo-core-listing.php' );
@@ -122,7 +122,7 @@ class Listeo_Core {
 		include( 'class-icalreader.php' );
 		include( 'class-listeo-core-ical.php' );
 		// include( 'class-listeo-core-compare.php' );
-		
+
 		// Load frontend JS & CSS
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
@@ -141,7 +141,7 @@ class Listeo_Core {
 		// if ( is_admin() ) {
 		// 	$this->admin = new Listeo_Core_Admin_API();
 		// }
-		
+
 		$this->post_types 	= Listeo_Core_Post_Types::instance();
 		$this->meta_boxes 	= new Listeo_Core_Meta_Boxes();
 		$this->listing 		= new Listeo_Core_Listing();
@@ -156,18 +156,18 @@ class Listeo_Core {
 		$this->emails 		= Listeo_Core_Emails::instance();
 		$this->commissions 	= Listeo_Core_Commissions::instance();
 		$this->payouts 		= Listeo_Core_Payouts::instance();
-		$this->ical 		= Listeo_Core_iCal::instance();									   
-		
-		
-		
+		$this->ical 		= Listeo_Core_iCal::instance();
+
+
+
 		// Handle localisation
 		$this->load_plugin_textdomain();
 		add_action( 'init', array( $this, 'load_localisation' ), 0 );
 		add_action( 'init', array( $this, 'image_size' ) );
 		add_action( 'init', array( $this, 'register_sidebar' ) );
-		
+
 		add_action( 'widgets_init', array( $this, 'widgets_init' ) );
-		
+
 		add_action( 'after_setup_theme', array( $this, 'include_template_functions' ), 11 );
 
 		add_filter( 'template_include', array( $this, 'listing_templates' ) );
@@ -179,10 +179,10 @@ class Listeo_Core {
 
 		// Schedule cron jobs
 		self::maybe_schedule_cron_jobs();
-		
+
 
 	} // End __construct ()
-	  
+
 	/**
 	 * Widgets init
 	 */
@@ -194,17 +194,17 @@ class Listeo_Core {
 	public function include_template_functions() {
 		include( REALTEO_PLUGIN_DIR.'/listeo-core-template-functions.php' );
 		include( REALTEO_PLUGIN_DIR.'/includes/paid-listings/listeo-core-paid-listings-functions.php' );
-		
+
 	}
 
 	/* handles single listing and archive listing view */
 	public static function listing_templates( $template ) {
-		$post_type = get_post_type();  
+		$post_type = get_post_type();
 		$custom_post_types = array( 'listing' );
-		
+
 		$template_loader = new Listeo_Core_Template_Loader;
 		if ( in_array( $post_type, $custom_post_types ) ) {
-			
+
 			if ( is_archive() && !is_author() ) {
 
 				$template = $template_loader->locate_template('archive-' . $post_type . '.php');
@@ -240,7 +240,7 @@ class Listeo_Core {
 	public function enqueue_styles () {
 		wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
 		wp_enqueue_style( $this->_token . '-frontend' );
-		
+
 
 	} // End enqueue_styles ()
 
@@ -253,11 +253,11 @@ class Listeo_Core {
 	 * @return  void
 	 */
 	public function enqueue_scripts () {
-		
+
 		// wp_register_script(	'dropzone', esc_url( $this->assets_url ) . 'js/dropzone.js', array( 'jquery' ), $this->_version, true );
 		wp_register_script(	'uploads', esc_url( $this->assets_url ) . 'js/uploads.min.js', array( 'jquery' ), $this->_version, true );
-		wp_register_script(	'ajaxsearch', esc_url( $this->assets_url ) . 'js/ajax.search.min.js', array( 'jquery' ), $this->_version, true );
-		
+		wp_register_script(	'ajaxsearch', esc_url( $this->assets_url ) . 'js/ajax.search.min.js', array( 'jquery' ), time(), true );
+
 		wp_register_script( $this->_token . '-leaflet-markercluster', esc_url( $this->assets_url ) . 'js/leaflet.markercluster.js', array( 'jquery' ), $this->_version );
 		wp_register_script( $this->_token . '-leaflet-geocoder', esc_url( $this->assets_url ) . 'js/control.geocoder.js', array( 'jquery' ), $this->_version );
 		wp_register_script( $this->_token . '-leaflet-search', esc_url( $this->assets_url ) . 'js/leaflet-search.src.js', array( 'jquery' ), $this->_version );
@@ -265,11 +265,11 @@ class Listeo_Core {
 		wp_register_script( $this->_token . '-leaflet-tilelayer-here', esc_url( $this->assets_url ) . 'js/leaflet-tilelayer-here.js', array( 'jquery' ), $this->_version );
 		wp_register_script( $this->_token . '-leaflet-gesture-handling', esc_url( $this->assets_url ) . 'js/leaflet-gesture-handling.min.js', array( 'jquery' ), $this->_version );
 		wp_register_script( $this->_token . '-leaflet', esc_url( $this->assets_url ) . 'js/listeo.leaflet.js', array( 'jquery' ), $this->_version );
-		
 
-		wp_register_script( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'js/frontend.js', array( 'jquery' ), $this->_version );
+
+		wp_register_script( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'js/frontend.js', array( 'jquery' ), time() );
 		wp_register_script( $this->_token . '-bookings', esc_url( $this->assets_url ) . 'js/bookings.js', array( 'jquery' ), $this->_version );
-		
+
 		wp_register_script(	'markerclusterer', esc_url( $this->assets_url )  . '/js/markerclusterer.js', array( 'jquery' ), $this->_version );
 		wp_register_script( 'infobox-min', esc_url( $this->assets_url )  . '/js/infobox.min.js', array( 'jquery' ), $this->_version  );
 		wp_register_script( 'jquery-geocomplete-min',esc_url( $this->assets_url )  . '/js/jquery.geocomplete.min.js', array( 'jquery','maps' ), $this->_version  );
@@ -284,17 +284,17 @@ class Listeo_Core {
 				wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js?key='.$maps_api_key.'&libraries=places' );
 				wp_enqueue_script( 'infobox-min' );
 				wp_enqueue_script( 'markerclusterer' );
-				wp_enqueue_script( 'jquery-geocomplete-min' );	
+				wp_enqueue_script( 'jquery-geocomplete-min' );
 				wp_enqueue_script( 'maps' );
-			
-			}	
+
+			}
 		} else {
 			wp_enqueue_script( 'leaflet.js', esc_url( $this->assets_url ) . 'js/leaflet.js');
 			$map_provider = get_option('listeo_map_provider');
 			if( $map_provider == 'bing'){
 				wp_enqueue_script('polyfill','https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise');
 				wp_enqueue_script($this->_token . '-leaflet-bing-layer');
-				
+
 			}
 			if( $map_provider = 'here' ){
 				wp_enqueue_script($this->_token . '-leaflet-tilelayer-here');
@@ -305,12 +305,12 @@ class Listeo_Core {
 			wp_enqueue_script( $this->_token . '-leaflet-gesture-handling' );
 			wp_enqueue_script( $this->_token . '-leaflet' );
 					}
-		
+
 		$recaptcha_key = get_option('listeo_recaptcha_sitekey');
 		if($recaptcha_key) {
-			wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js');	
+			wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js');
 		}
-		
+
 
 		$_price_min =  $this->get_min_all_listing_price('');
 		$_price_max =  $this->get_max_all_listing_price('');
@@ -318,8 +318,8 @@ class Listeo_Core {
 
 		$ajax_url = admin_url( 'admin-ajax.php', 'relative' );
 		$currency = get_option( 'listeo_currency' );
-		$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency); 
-		
+		$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency);
+
 		$localize_array = array(
 				'ajax_url'                	=> $ajax_url,
 				'is_rtl'                  	=> is_rtl() ? 1 : 0,
@@ -334,7 +334,7 @@ class Listeo_Core {
 				'country'		      		=> get_option( 'listeo_maps_limit_country' ),
 				'upload'					=> admin_url( 'admin-ajax.php?action=handle_dropped_media' ),
   				'delete'					=> admin_url( 'admin-ajax.php?action=handle_delete_media' ),
-  				'color'						=> get_option('pp_main_color','#274abb' ), 
+  				'color'						=> get_option('pp_main_color','#274abb' ),
   				'dictDefaultMessage'		=> esc_html__("Drop files here to upload","listeo_core"),
 				'dictFallbackMessage' 		=> esc_html__("Your browser does not support drag'n'drop file uploads.","listeo_core"),
 				'dictFallbackText' 			=> esc_html__("Please use the fallback form below to upload your files like in the olden days.","listeo_core"),
@@ -412,35 +412,35 @@ class Listeo_Core {
 		        "multiguest" => esc_html__("Multiply by guests",'listeo_core'),
 		        "multidays" => esc_html__("Multiply by days",'listeo_core'),
 		        "multiguestdays" => esc_html__("Multiply by guest & days",'listeo_core'),
-		        "quantitybuttons" => esc_html__("Quantity Buttons",'listeo_core'),	
+		        "quantitybuttons" => esc_html__("Quantity Buttons",'listeo_core'),
 			);
 		$criteria_fields = listeo_get_reviews_criteria();
-		
+
 		$loc_critera = array();
 		foreach ($criteria_fields as $key => $value) {
 			$loc_critera[] = $key;
 		};
 		if(!empty($loc_critera)){
-			$localize_array['review_criteria'] = implode(',',$loc_critera);	
+			$localize_array['review_criteria'] = implode(',',$loc_critera);
 		}
-		
+
 		wp_localize_script(  $this->_token . '-frontend', 'listeo_core', $localize_array);
 
 		wp_enqueue_script( 'jquery-ui-core' );
-		
+
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script( 'uploads' );
 		if(get_option('listeo_ajax_browsing','on') == 'on'){
-			wp_enqueue_script( 'ajaxsearch' );	
+			wp_enqueue_script( 'ajaxsearch' );
 		}
-		
-		
+
+
 		wp_enqueue_script( $this->_token . '-frontend' );
 		wp_enqueue_script( $this->_token . '-bookings' );
-	
-		
+
+
 	} // End enqueue_scripts ()
 
 	/**
@@ -461,28 +461,28 @@ class Listeo_Core {
 	 * @return  void
 	 */
 	public function admin_enqueue_scripts ( $hook = '' ) {
-		
+
 		wp_register_script( $this->_token . '-settings', esc_url( $this->assets_url ) . 'js/settings' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
 		wp_enqueue_script( $this->_token . '-settings' );
 		wp_register_script( $this->_token . '-admin', esc_url( $this->assets_url ) . 'js/admin' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
 		wp_enqueue_script( $this->_token . '-admin' );
-		
+
 
 		$map_provider = get_option( 'listeo_map_provider');
 		$maps_api_key = get_option( 'listeo_maps_api' );
 		if($map_provider == 'google') {
 			if($maps_api_key) {
-				wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js?key='.$maps_api_key.'&libraries=places' );	
+				wp_enqueue_script( 'google-maps', 'https://maps.google.com/maps/api/js?key='.$maps_api_key.'&libraries=places' );
 				wp_register_script( $this->_token . '-admin-maps', esc_url( $this->assets_url ) . 'js/admin.maps' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
 				wp_enqueue_script( $this->_token . '-admin-maps' );
-			
+
 			}
 		} else {
 			wp_enqueue_script( 'leaflet.js', esc_url( $this->assets_url ) . 'js/leaflet.js');
 			wp_enqueue_script( 'leaflet-geocoder',esc_url( $this->assets_url ) . 'js/control.geocoder.js');
 			wp_register_script( $this->_token . '-admin-leaflet', esc_url( $this->assets_url ) . 'js/admin.leaflet' . $this->script_suffix . '.js', array( 'jquery' ), $this->_version );
 			wp_enqueue_script( $this->_token . '-admin-leaflet' );
-			
+
 		}
 		wp_enqueue_script('jquery-ui-datepicker');
 		if(function_exists('listeo_date_time_wp_format')) {
@@ -509,7 +509,7 @@ class Listeo_Core {
 
 
 		if ( class_exists( 'WC_Product_Subscription' ) ) {
-		include( 'paid-listings/class-listeo-core-paid-subscriptions.php' );			
+		include( 'paid-listings/class-listeo-core-paid-subscriptions.php' );
 			include_once( 'paid-listings/class-listeo-core-paid-subscriptions-product.php' );
 			include_once( 'paid-listings/class-wc-product-listing-package-subscription.php' );
 
@@ -552,7 +552,7 @@ class Listeo_Core {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title margin-bottom-35">',
 			'after_title'   => '</h3>',
-		) );		
+		) );
 
 
 
@@ -576,7 +576,7 @@ class Listeo_Core {
 	    ) ;
 
 	    return $result;
-	}	
+	}
 
 	function get_max_listing_price($type) {
 		global $wpdb;
@@ -593,10 +593,10 @@ class Listeo_Core {
 				AND ( m2.meta_key = '_price'  ) AND m2.meta_value != ''
 	        ", $type )
 	    ) ;
-	   
+
 
 	    return $result;
-	}	
+	}
 
 	function get_min_all_listing_price() {
 		global $wpdb;
@@ -614,7 +614,7 @@ class Listeo_Core {
 	    ) ;
 
 	    return $result;
-	}	
+	}
 
 	function get_max_all_listing_price() {
 		global $wpdb;
@@ -630,7 +630,7 @@ class Listeo_Core {
 				AND ( m2.meta_key = '_price'  ) AND m2.meta_value != ''
 	        "
 	    ) ;
-	   
+
 
 	    return $result;
 	}
@@ -679,13 +679,13 @@ class Listeo_Core {
 	        }
 	    }
 
-	    echo $newupload;    
+	    echo $newupload;
 	    wp_die();
 	}
 
-		
+
 		function google_api_notice() {
-		
+
 		$map_provider = get_option( 'listeo_map_provider');
 		$maps_api_key = get_option( 'listeo_maps_api' );
 		if($map_provider == 'google') {
@@ -694,8 +694,8 @@ class Listeo_Core {
 			    ?>
 			    <div class="error notice">
 					<p><?php echo esc_html_e('Please configure Google Maps API key to use all Listeo features.') ?> <a href="http://www.docs.purethemes.net/listeo/knowledge-base/getting-google-maps-api-key/"><?php esc_html_e('Check here how to do it.','listeo_core') ?></a></p>
-			    	
-			        
+
+
 			    </div>
 			    <?php
 			}
@@ -776,7 +776,7 @@ class Listeo_Core {
 	* Schedule cron jobs for Listeo_Core events.
 	*/
 	public static function maybe_schedule_cron_jobs() {
-		
+
 		if ( ! wp_next_scheduled( 'listeo_core_check_for_expired_listings' ) ) {
 			wp_schedule_event( time(), 'hourly', 'listeo_core_check_for_expired_listings' );
 		}
@@ -816,7 +816,7 @@ class Listeo_Core {
 		if ( class_exists( 'WP_Roles' ) && ! isset( $wp_roles ) ) {
 			$wp_roles = new WP_Roles();
 		}
- 
+
 		if ( is_object( $wp_roles ) ) {
 				remove_role( 'owner' );
 				add_role( 'owner', __( 'Owner', 'listeo_core' ), array(
@@ -830,7 +830,7 @@ class Listeo_Core {
 					'delete_listings'      => true,
 					'edit_listings'        => true,
 					'assign_listing_terms' => true,
-					
+
 			) );
 
 			$capabilities = array(
@@ -869,7 +869,7 @@ class Listeo_Core {
 		}
 
 	}
-	
+
 	//Add support1.3.1
 function listeo_core_update_db_1_3_2() {
 	$db_option = get_option( 'listeo_core_db_version', '1.3.1' );

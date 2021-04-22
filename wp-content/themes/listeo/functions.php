@@ -17,8 +17,8 @@ if ( ! function_exists( 'listeo_setup' ) ) :
 // $date_format = get_option('date_format');
 // echo strtotime( date( $date_format, strtotime('+5 days') ) );
 global $wpdb;
-		
-//temp fix for listing author 
+
+//temp fix for listing author
 $ownerusers = get_users( 'role=owner' );
 foreach ( $ownerusers as $user ) {
    $user->add_cap('level_1');
@@ -107,7 +107,7 @@ function listeo_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );	
+	) );
 
 	register_sidebar(array(
 		'id' => 'footer1',
@@ -155,11 +155,11 @@ function listeo_widgets_init() {
 		'after_title'   => '',
 	) );
 	if (get_option('pp_listeo_sidebar')):
-		
+
 		$pp_sidebars = get_option('pp_listeo_sidebar');
 		if(!empty($pp_sidebars)):
 			foreach ($pp_sidebars as $pp_sidebar) {
-		
+
 				register_sidebar(array(
 					'name' => esc_html($pp_sidebar["sidebar_name"]),
 					'id' => esc_attr($pp_sidebar["sidebar_id"]),
@@ -178,7 +178,7 @@ add_action( 'widgets_init', 'listeo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function listeo_scripts() {
-	
+
 	$my_theme = wp_get_theme();
 	$ver_num = $my_theme->get( 'Version' );
 
@@ -187,21 +187,21 @@ function listeo_scripts() {
     wp_register_style( 'listeo-icons', get_template_directory_uri(). '/css/icons.css' );
 	wp_register_style( 'listeo-slick', get_template_directory_uri(). '/css/slick.css' );
 	wp_register_style( 'listeo-slick-theme', get_template_directory_uri(). '/css/slick-theme.css' );
-	wp_enqueue_style( 'listeo-style', get_stylesheet_uri(), array('bootstrap','listeo-icons','listeo-woocommerce'), $ver_num );
+	wp_enqueue_style( 'listeo-style', get_stylesheet_uri(), array('bootstrap','listeo-icons','listeo-woocommerce'), time() );
 	/*wp_enqueue_style( 'listeo-slick' );
 	wp_enqueue_style( 'listeo-slick-theme' );*/
-	
+
 	wp_register_script( 'chosen-min', get_template_directory_uri() . '/js/chosen.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'counterup-min', get_template_directory_uri() . '/js/counterup.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'jquery-scrollto', get_template_directory_uri() . '/js/jquery.scrollto.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'datedropper', get_template_directory_uri() . '/js/datedropper.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'dropzone', get_template_directory_uri() . '/js/dropzone.js', array( 'jquery' ), $ver_num );
-	
+
 	wp_register_script( 'isotope-min', get_template_directory_uri() . '/js/isotope.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'jquery-counterdown-min', get_template_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'magnific-popup-min', get_template_directory_uri() . '/js/magnific-popup.min.js', array( 'jquery' ), $ver_num );
 
-	
+
 	wp_register_script( 'quantityButtons', get_template_directory_uri() . '/js/quantityButtons.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'rangeslider-min', get_template_directory_uri() . '/js/rangeslider.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'timedropper', get_template_directory_uri() . '/js/timedropper.js', array( 'jquery' ), $ver_num );
@@ -209,7 +209,7 @@ function listeo_scripts() {
 	wp_register_script( 'waypoints-min', get_template_directory_uri() . '/js/waypoints.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'slick-min', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'mmenu-min', get_template_directory_uri() . '/js/mmenu.min.js', array( 'jquery' ), $ver_num );
-	
+
 	// wp_register_script( 'moment', get_template_directory_uri() . '/js/moment.min.js', array( 'jquery' ), $ver_num );
 	// wp_register_script( 'daterangerpicker', get_template_directory_uri() . '/js/daterangepicker.js?'.time(), array( 'jquery','moment' ), $ver_num );
 	wp_register_script( 'daterangerpicker', 'https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js', array( 'jquery','moment' ) );
@@ -220,15 +220,15 @@ function listeo_scripts() {
 	wp_enqueue_script( 'counterup-min' );
 	wp_enqueue_script( 'datedropper' );
 	wp_enqueue_script( 'dropzone' );
-	
-	
+
+
 	if ( is_page_template( 'template-comming-soon.php' ) ) {
 		wp_enqueue_script( 'jquery-counterdown-min' );
 	}
 	wp_enqueue_script( 'magnific-popup-min' );
 
-	
-	
+
+
 	wp_enqueue_script( 'mmenu-min' );
 	wp_enqueue_script( 'slick-min' );
 	wp_enqueue_script( 'quantityButtons' );
@@ -253,10 +253,10 @@ function listeo_scripts() {
 		'family' => 'Raleway:300,400,500,600,700' // Change this font to whatever font you'd like
 	);
 	wp_register_style( 'google-fonts-raleway', add_query_arg( $raleway_args, "//fonts.googleapis.com/css" ), array(), null );
-	
+
 	wp_enqueue_style( 'google-fonts-raleway' );
 	wp_enqueue_style( 'google-fonts-open-sans' );
-	
+
 	$convertedData = listeo_date_time_wp_format();
 
 	// add converented format date to javascript
@@ -285,7 +285,7 @@ function listeo_admin_scripts($hook){
 		wp_enqueue_style( 'listeo-admin', get_template_directory_uri(). '/css/admin.css' );
 		wp_enqueue_style( 'listeo-icons', get_template_directory_uri(). '/css/icons.css' );
 		wp_enqueue_script( 'listeo-icon-selector', get_template_directory_uri() . '/js/iconselector.min.js', array('jquery'), '20180323', true );
-		
+
 	}
 }
 
@@ -346,11 +346,11 @@ require get_template_directory() . '/inc/tgmpa.php';
 require get_template_directory() . '/inc/properties-maps.php';
 
 /**
- * Load woocommerce 
+ * Load woocommerce
  */
 require get_template_directory() . '/inc/woocommerce.php';
 /**
- * Load megamenu 
+ * Load megamenu
  */
 require get_template_directory() . '/inc/megamenu.php';
 
@@ -393,7 +393,7 @@ add_filter( 'woocommerce_new_customer_data', 'listeo_new_customer_data');
             	echo '<meta name="robots" content="noindex, follow">';
             }
     	}
-        
+
     }
 }
 

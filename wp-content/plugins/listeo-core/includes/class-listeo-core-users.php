@@ -190,7 +190,7 @@ class Listeo_Core_Users {
 			$popup_login = get_option( 'listeo_popup_login','ajax' );
 
 			if($popup_login == 'ajax') {
-				wp_register_script( 'listeo_core-ajax-login', esc_url( LISTEO_CORE_ASSETS_URL ) . '/js/ajax-login-script.js', array('jquery'), '1.0'  );
+				wp_register_script( 'listeo_core-ajax-login', esc_url( LISTEO_CORE_ASSETS_URL ) . '/js/ajax-login-script.js', array('jquery'), time()  );
 	  			wp_enqueue_script('listeo_core-ajax-login');
 	  			wp_localize_script( 'listeo_core-ajax-login', 'listeo_login', array(
 			        'ajaxurl' => admin_url( 'admin-ajax.php' ),

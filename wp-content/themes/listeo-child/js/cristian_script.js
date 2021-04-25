@@ -46,10 +46,10 @@ Tags:  theme-options, translation-ready, two-columns
                                     "<div class='modal_info'></div>"+
                                     "<div class='modal_body'><div class='modal_footer'><button class='modal_apply'>Apply</button></div></div>"+
                             "</div>");
-        
-        
+
+
     }
-    
+
         //move sort by filter to the top
         $(".sort-by").appendTo("#listeo_core-search-form div.row:nth-child(2) div.panel-wrapper");
     	$(".sort-by a.chosen-single span").text("Sort By");
@@ -69,9 +69,9 @@ Tags:  theme-options, translation-ready, two-columns
         });
         $('input[name="cristian_date_picker"]').val('');
  	$('input[name="cristian_date_picker"]').attr("placeholder","When?");
-    
+
     // });
-    
+
     $(".cristian_more_filter_modal .modal_close").click(function(){
         close_cristian_modal();
     });
@@ -112,13 +112,13 @@ Tags:  theme-options, translation-ready, two-columns
             else if($(".listing-manager-error p").text().indexOf("Gallery")>=0)
                 setTimeout(function() { $("div.add-listing-section.gallery").attr("tabindex",-1).focus();}, 2000);
         }
-        
-        $("body").on("click", function (event) 
+
+        $("body").on("click", function (event)
         {
             if($(event.target).is('.not_found_modal')) {
                 event.preventDefault();
                 $(".not_found_modal").css("display","none");
-            }     
+            }
         });
 
         if (window.history && history.pushState && $("form#listing_preview").length) {
@@ -127,11 +127,11 @@ Tags:  theme-options, translation-ready, two-columns
                 addEventListener('popstate', function() {
                     var leavePage = confirm("If you go back, your previous settings would be unsaved. Do you still want to leave this page?");
                     if (leavePage) {
-                        history.back() 
+                        history.back()
                     } else {
                         history.pushState(null, null, null);
                     }
-                });    
+                });
             });
         }
 
@@ -143,8 +143,5 @@ Tags:  theme-options, translation-ready, two-columns
         $('body').css("overflow","unset");
         $('#listeo_core-search-form').appendTo('section.search .row .col-md-12');
     }
-           
-	
-	
+
 })(jQuery);
- 

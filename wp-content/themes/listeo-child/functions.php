@@ -23,11 +23,11 @@ function listeo_cristian_behind_scripts() {
 	// wp_enqueue_script('daterangerpicker');
 
 	wp_register_script( 'cristian_script', get_stylesheet_directory_uri() . '/js/cristian_script.js', array( 'jquery' ));
-	wp_register_script( 'counterup', get_stylesheet_directory_uri() . '/js/counterup.js', array( 'jquery' ));
+	//wp_register_script( 'counterup', get_stylesheet_directory_uri() . '/js/counterup.js', array( 'jquery' ));
 	wp_register_script( 'cm_scripts', get_stylesheet_directory_uri() . '/js/cm_scripts.js', array( 'jquery' ), time());
 
 	wp_enqueue_script('cristian_script');
-	wp_enqueue_script('counterup');
+	//wp_enqueue_script('counterup');
 	wp_enqueue_script('cm_scripts');
 }
 
@@ -161,6 +161,5 @@ add_action("widgets_init","register_unveryfie_siderbar");
  * Load Core User Class.
  */
 //require_once( get_stylesheet_directory(). '/inc/hypley-modify-listeo-core-users.php' );
-
 
 

@@ -34,13 +34,13 @@
 	<!-- Header -->
 	<div id="header">
 		<div class="container">
-			
+
 			<!-- Left Side Content -->
 			<div class="left-side" >
 				<div id="logo">
-					<?php 
-		                $logo = get_option( 'pp_logo_upload', '' ); 
-		                $logo_retina = get_option( 'pp_retina_logo_upload', '' ); 
+					<?php
+		                $logo = get_option( 'pp_logo_upload', '' );
+		                $logo_retina = get_option( 'pp_retina_logo_upload', '' );
 		             	if($logo) {
 		                    if(is_front_page()){ ?>
 		                    <a href="<?php echo esc_url( 'www.hypley.com.au' ); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
@@ -66,7 +66,7 @@
 		                }
 	                ?>
                 </div>
-              
+
 
 				<!-- Mobile Navigation -->
 				<div class="mmenu-trigger <?php if (wp_nav_menu( array( 'theme_location' => 'primary', 'echo' => false )) == false) { ?> hidden-burger <?php } ?>">
@@ -80,33 +80,33 @@
 
 				<!-- Main Navigation -->
 				<nav id="navigation" class="style-1">
-					<?php wp_nav_menu( array( 
-							'theme_location' => 'primary', 
-							'menu_id' => 'responsive', 
+					<?php wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_id' => 'responsive',
 							'container' => false,
 							'walker' => new listeo_megamenu_walker
 					) );  ?>
-			
+
 				</nav>
 				<div class="clearfix"></div>
 				<!-- Main Navigation / End -->
-				
+
 			</div>
 			<!-- Left Side Content / End -->
-			<?php 
+			<?php
 			$my_account_display = get_option('listeo_my_account_display', true );
 			$submit_display = get_option('listeo_submit_display', true );
-			if($my_account_display != false || $submit_display != false ) :	?> 
+			if($my_account_display != false || $submit_display != false ) :	?>
 			<!-- Right Side Content / End -->
 
 			<div class="right-side">
 				<div class="header-widget">
 					<?php if( true == $my_account_display) : ?>
-					
-						<?php if ( is_user_logged_in() ) { 
+
+						<?php if ( is_user_logged_in() ) {
 								$current_user = wp_get_current_user();
 								$roles = $current_user->roles;
-								$role = array_shift( $roles ); 
+								$role = array_shift( $roles );
 								if(!empty($current_user->user_firstname)){
 									$name = $current_user->user_firstname;
 								} else {
@@ -116,7 +116,7 @@
 						<div class="user-menu">
 							<div class="user-name">
 								<span>
-									<?php //echo get_avatar( $current_user->user_email, 32 );?>	
+									<?php //echo get_avatar( $current_user->user_email, 32 );?>
 									<?php
 									// We need to show custome profile picture first otherwise get it from WordPress.
 									$custom_avatar_id 	= get_the_author_meta( 'listeo_core_avatar_id', get_current_user_id() ) ;
@@ -126,18 +126,18 @@
 									} else {
 										echo get_avatar( $current_user->user_email, 32 );
 									}
-									?>									
+									?>
 								</span>
 								<?php esc_html_e('My Account','listeo') ?>
 							</div>
 							<ul>
-								
+
 							<?php if(is_user_logged_in()){ ?>
 								<?php if(in_array($role,array('administrator','admin','owner'))) : ?>
 									<?php $submit_page = get_option('listeo_submit_page'); ?>
 										<li <?php if( $post->ID == $submit_page ) : ?>class="active" <?php endif; ?>><a href="<?php echo esc_url(get_permalink($submit_page)); ?>" class=""><?php esc_html_e('Add Listing', 'listeo'); ?> <i class="sl sl-icon-plus"></i></a></li>
 								<?php endif; ?>
-							<?php } ?> 
+							<?php } ?>
 
 
 							<?php if(!in_array($role,array('owner'))) : ?>
@@ -161,17 +161,17 @@
 									<li <?php if( $post->ID == $bookmarks_page ) : ?>class="active" <?php endif; ?>><a href="<?php echo esc_url(get_permalink($bookmarks_page)); ?>"><i class="sl sl-icon-heart"></i> <?php esc_html_e('Bookmarks','listeo');?></a></li>
 									<?php endif; ?>
 								<?php endif; ?>
-								
+
 								<?php $messages_page = get_option('listeo_messages_page');  if( $messages_page ) : ?>
 								<li <?php if( $post->ID == $messages_page ) : ?>class="active" <?php endif; ?>><a href="<?php echo esc_url(get_permalink($messages_page)); ?>"><i class="sl sl-icon-envelope-open"></i> <?php esc_html_e('Messages','listeo');?>
-								<?php 
+								<?php
 									$counter = listeo_get_unread_counter();
 									if($counter) { ?>
 									<span class="nav-tag messages"><?php echo esc_html($counter); ?></span>
 									<?php } ?>
 								</a></li>
 								<?php endif; ?>
-								
+
 							<?php if(in_array($role,array('administrator','admin','owner'))) : ?>
 								<?php $bookings_page = get_option('listeo_bookings_page');  if( $bookings_page ) : ?>
 								<li <?php if( $post->ID == $bookings_page ) : ?>class="active" <?php endif; ?>><a href="<?php echo esc_url(get_permalink($bookings_page)); ?>/?status=waiting"><i class="fa fa-calendar-check-o"></i> <?php esc_html_e('Bookings','listeo');?></a></li>
@@ -187,18 +187,18 @@
 								<li><a href="<?php echo wp_logout_url(home_url()); ?>"><i class="sl sl-icon-power"></i> <?php esc_html_e('Logout','listeo');?></a></li>
 							</ul>
 						</div>
-						<?php } else { 
-							$popup_login = get_option( 'listeo_popup_login' ); 
-							$submit_page = get_option('listeo_submit_page');  
+						<?php } else {
+							$popup_login = get_option( 'listeo_popup_login' );
+							$submit_page = get_option('listeo_submit_page');
 							if(function_exists('Listeo_Core')):
 							if( $popup_login == 'ajax' && !is_page_template('template-dashboard.php') ) { ?>
 								<!--<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim "><i class="sl sl-icon-login"></i> <?php esc_html_e('Sign In', 'listeo'); ?></a>
-								
+
 								<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-user"></i> <?php esc_html_e('Sign Up', 'listeo'); ?></a>-->
 								<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim new-signin sign_in_link"> <?php esc_html_e('Sign In', 'listeo'); ?></a>
-								
+
 								<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim new-signin sign_up_link"> <?php esc_html_e('Sign Up', 'listeo'); ?></a>
-								
+
 							<?php } else {
 								$login_page = get_option('listeo_profile_page') ?>
 								<a href="<?php echo esc_url(get_permalink($login_page)); ?>" class="sign-in sign_in_link"><!--<i class="sl sl-icon-login"></i>--> <?php esc_html_e('Sign In', 'listeo'); ?></a>
@@ -217,25 +217,25 @@
 								<?php $browse_page = get_post_type_archive_link( 'listing' ); ;  if( $browse_page ) : ?>
 									<a href="<?php echo esc_url($browse_page); ?>" class="button border"><?php esc_html_e('Browse Listings', 'listeo'); ?></i></a>
 								<?php endif; ?>
-							<?php endif; ?>	
+							<?php endif; ?>
 						<?php } else { ?>
 								<?php $submit_page = get_option('listeo_submit_page');  if( $submit_page ) : ?>
 									<a data-t2="<?php echo $submit_page; ?>" href="<?php echo esc_url(get_permalink($submit_page)); ?>" class="button border with-icon"><?php esc_html_e('Add Listing', 'listeo'); ?> <i class="sl sl-icon-plus"></i></a>
 								<?php endif; ?>
 						<?php } ?>
-						
+
 					<?php endif; ?>
 				</div>
 			</div>
 			<!-- Right Side Content / End -->
 			<?php endif; ?>
-			
+
 		</div>
 	</div>
 	<!-- Header / End -->
 
 </header>
-<?php 
+<?php
 if( true == $my_account_display) : ?>
 <!-- Sign In Popup -->
 <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
@@ -244,7 +244,7 @@ if( true == $my_account_display) : ?>
 		<h3><?php esc_html_e('Sign In','listeo'); ?></h3>
 	</div>
 	<!--Tabs -->
-	<div class="sign-in-form style-1"> 
+	<div class="sign-in-form style-1">
 		<?php  do_action('listeo_login_form'); ?>
 	</div>
 </div>
@@ -255,9 +255,9 @@ if( true == $my_account_display) : ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery( document ).ready(function() {
-	<?php 
+	<?php
 	if(is_page(66)){
-		?>		
+		?>
 		setTimeout(function(){ jQuery('.sign_in_li').trigger('click'); }, 200);
 		<?php
 	}
@@ -283,7 +283,7 @@ jQuery(document).on('click','.sign_up_link',function(){
         jQuery('.sign_in_li').removeClass('active');
         jQuery('.sign_up_li').addClass('active');
        jQuery('.sign_up_li a').trigger('click');
-});	
+});
 </script>
 <script>
 jQuery(document).ready(function()
@@ -302,13 +302,12 @@ img.listeo_liting_single_galary_image {
 img.listeo_liting_single_galary_image:nth-child(1) {
     display: block;
 }
-</style> 
+</style>
 
 <script type="text/javascript">
-$(function(){
+jQuery(function($){
   $('div #media-uploader a').click(function(){
     alert($(this).attr('href'));
   });
 });
 </script>
-

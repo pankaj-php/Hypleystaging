@@ -192,7 +192,8 @@ function listeo_scripts() {
 	wp_enqueue_style( 'listeo-slick-theme' );*/
 
 	wp_register_script( 'chosen-min', get_template_directory_uri() . '/js/chosen.min.js', array( 'jquery' ), $ver_num );
-	wp_register_script( 'counterup-min', get_template_directory_uri() . '/js/counterup.min.js', array( 'jquery' ), $ver_num );
+	//wp_register_script( 'counterup-min', get_template_directory_uri() . '/js/counterup.min.js', array( 'jquery' ), $ver_num );
+	wp_register_script( 'counterup-min', 'https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'jquery-scrollto', get_template_directory_uri() . '/js/jquery.scrollto.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'datedropper', get_template_directory_uri() . '/js/datedropper.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'dropzone', get_template_directory_uri() . '/js/dropzone.js', array( 'jquery' ), $ver_num );
@@ -210,9 +211,9 @@ function listeo_scripts() {
 	wp_register_script( 'slick-min', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), $ver_num );
 	wp_register_script( 'mmenu-min', get_template_directory_uri() . '/js/mmenu.min.js', array( 'jquery' ), $ver_num );
 
-	// wp_register_script( 'moment', get_template_directory_uri() . '/js/moment.min.js', array( 'jquery' ), $ver_num );
+	 wp_register_script( 'momentScript', get_template_directory_uri() . '/js/moment.min.js', array( 'jquery' ), $ver_num );
 	// wp_register_script( 'daterangerpicker', get_template_directory_uri() . '/js/daterangepicker.js?'.time(), array( 'jquery','moment' ), $ver_num );
-	wp_register_script( 'daterangerpicker', 'https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js', array( 'jquery','moment' ) );
+	wp_register_script( 'daterangerpicker', 'https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js', array( 'jquery','momentScript' ) );
  	wp_register_script( 'flatpickr', get_template_directory_uri() . '/js/flatpickr.js', array( 'jquery' ), $ver_num );
  	wp_register_script( 'bootstrap-slider-min', get_template_directory_uri() . '/js/bootstrap-slider.min.js', array( 'jquery' ), $ver_num );
 
@@ -237,7 +238,9 @@ function listeo_scripts() {
 	wp_enqueue_script( 'jquery-scrollto' );
 	wp_enqueue_script( 'tooltips-min' );
 	wp_enqueue_script( 'waypoints-min' );
-	wp_enqueue_script( 'moment' );
+	wp_deregister_script( 'moment' );
+	wp_deregister_script( 'wp-i18n' );
+	wp_enqueue_script( 'momentScript' );
 	wp_enqueue_script( 'daterangerpicker' );
 	wp_enqueue_script( 'bootstrap-slider-min' );
 	wp_enqueue_script( 'flatpickr' );
@@ -398,3 +401,12 @@ add_filter( 'woocommerce_new_customer_data', 'listeo_new_customer_data');
 }
 
 add_action('wp_head', 'listeo_noindex_for_products');
+
+
+
+
+add_filter( 'use_block_editor_for_post', '__return_false' );
+
+if( !is_admin() ){
+    add_filter( 'user_can_richedit' , '__return_false', 50 );
+}

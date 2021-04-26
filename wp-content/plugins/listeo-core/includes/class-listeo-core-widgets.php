@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -70,16 +70,16 @@ class Listeo_Core_Widget extends WP_Widget {
 		add_action( 'deleted_post', array( $this, 'flush_widget_cache' ) );
 		add_action( 'switch_theme', array( $this, 'flush_widget_cache' ) );
 
-		
+
 	}
 
-	
+
 
 	/**
 	 * get_cached_widget function.
 	 */
 	public function get_cached_widget( $args ) {
-		
+
 		return false;
 
 		$cache = wp_cache_get( $this->widget_id, 'widget' );
@@ -161,7 +161,7 @@ class Listeo_Core_Widget extends WP_Widget {
 						<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>" name="<?php echo $this->get_field_name( $key ); ?>" type="text" value="<?php echo esc_attr( $value ); ?>" />
 					</p>
 					<?php
-				break;			
+				break;
 				case 'checkbox' :
 					?>
 					<p>
@@ -181,13 +181,13 @@ class Listeo_Core_Widget extends WP_Widget {
 				case 'dropdown' :
 					?>
 					<p>
-						<label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>	
+						<label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
 						<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>" name="<?php echo $this->get_field_name( $key ); ?>">
-	
+
 						<?php foreach ($setting['options'] as $key => $option_value) { ?>
-							<option <?php selected($value,$key); ?> value="<?php echo esc_attr($key); ?>"><?php echo esc_attr($option_value); ?></option>	
+							<option <?php selected($value,$key); ?> value="<?php echo esc_attr($key); ?>"><?php echo esc_attr($option_value); ?></option>
 						<?php } ?></select>
-					
+
 					</p>
 					<?php
 				break;
@@ -253,7 +253,7 @@ class Listeo_Core_Featured_Properties extends Listeo_Core_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance ) {
-		
+
 
 		ob_start();
 
@@ -266,7 +266,7 @@ class Listeo_Core_Featured_Properties extends Listeo_Core_Widget {
 			'orderby'        => 'date',
 			'order'          => 'DESC',
 			'post_type' 	 => 'listing',
-			'meta_query'     =>  array( 
+			'meta_query'     =>  array(
 				array(
 					'key'     => '_featured',
 					'value'   => 'on',
@@ -275,7 +275,7 @@ class Listeo_Core_Featured_Properties extends Listeo_Core_Widget {
 				array('key' => '_thumbnail_id')
 			)
 		) );
-	
+
 		$template_loader = new Listeo_Core_Template_Loader;
 		if ( $listings->have_posts() ) : ?>
 
@@ -287,8 +287,8 @@ class Listeo_Core_Featured_Properties extends Listeo_Core_Widget {
 				<?php while ( $listings->have_posts() ) : $listings->the_post(); ?>
 					<div class="fw-carousel-item">
                         <?php
-                       //     $template_loader->get_template_part( 'content-listing-compact' );  
-                            $template_loader->get_template_part( 'content-listing-grid' );  
+                       //     $template_loader->get_template_part( 'content-listing-compact' );
+                            $template_loader->get_template_part( 'content-listing-grid' );
                         ?>
                     </div>
 				<?php endwhile; ?>
@@ -333,13 +333,13 @@ class Listeo_Core_Bookmarks_Share_Widget extends Listeo_Core_Widget {
 				'type'  => 'checkbox',
 				'std'	=> 'on',
 				'label' => __( 'Bookmark button', 'listeo_core' )
-			),			
+			),
 			'share' => array(
 				'type'  => 'checkbox',
 				'std'	=> 'on',
 				'label' => __( 'Share buttons', 'listeo_core' )
 			),
-		
+
 		);
 		$this->register();
 	}
@@ -363,49 +363,49 @@ class Listeo_Core_Bookmarks_Share_Widget extends Listeo_Core_Widget {
 		extract( $args );
 
 		global $post;
-		$share = (isset($instance['share'])) ? $instance['share'] : '' ; 
-		$bookmarks = (isset($instance['bookmarks'])) ? $instance['bookmarks'] : '' ; 
-		
-		echo $before_widget; 
-		
+		$share = (isset($instance['share'])) ? $instance['share'] : '' ;
+		$bookmarks = (isset($instance['bookmarks'])) ? $instance['bookmarks'] : '' ;
+
+		echo $before_widget;
+
 		?>
 		<div class="listing-share margin-top-40 margin-bottom-40 no-border">
 
-		<?php 
+		<?php
 			if(!empty($bookmarks)):
-			
+
 				$nonce = wp_create_nonce("listeo_core_bookmark_this_nonce");
-		
+
 				$classObj = new Listeo_Core_Bookmarks;
-				
+
 				if( $classObj->check_if_added($post->ID) ) { ?>
-					<button onclick="window.location.href='<?php echo get_permalink( get_option( 'listeo_bookmarks_page' ))?>'" class="like-button save liked" ><span class="like-icon liked"></span> <?php esc_html_e('Bookmarked','listeo_core') ?></button> 
-				<?php } else { 
+					<button onclick="window.location.href='<?php echo get_permalink( get_option( 'listeo_bookmarks_page' ))?>'" class="like-button save liked" ><span class="like-icon liked"></span> <?php esc_html_e('Bookmarked','listeo_core') ?></button>
+				<?php } else {
 					if(is_user_logged_in()){ ?>
 						<button class="like-button listeo_core-bookmark-it"
-							data-post_id="<?php echo esc_attr($post->ID); ?>" 
+							data-post_id="<?php echo esc_attr($post->ID); ?>"
 							data-confirm="<?php esc_html_e('Bookmarked!','listeo_core'); ?>"
-							data-nonce="<?php echo esc_attr($nonce); ?>" 
-							><span class="like-icon"></span> <?php esc_html_e('Bookmark this listing','listeo_core') ?></button> 
-						<?php } else { 
-							$popup_login = get_option( 'listeo_popup_login','ajax' ); 
+							data-nonce="<?php echo esc_attr($nonce); ?>"
+							><span class="like-icon"></span> <?php esc_html_e('Bookmark this listing','listeo_core') ?></button>
+						<?php } else {
+							$popup_login = get_option( 'listeo_popup_login','ajax' );
 							if($popup_login == 'ajax') { ?>
-								<button href="#sign-in-dialog" class="like-button-notlogged sign-in popup-with-zoom-anim"><span class="like-icon"></span> <?php esc_html_e('Login To Bookmark Items','listeo_core') ?></button> 
-							<?php } else { 
+								<button href="#sign-in-dialog" class="like-button-notlogged sign-in popup-with-zoom-anim"><span class="like-icon"></span> <?php esc_html_e('Login To Bookmark Items','listeo_core') ?></button>
+							<?php } else {
 								$login_page = get_option('listeo_profile_page'); ?>
-								<a href="<?php echo esc_url(get_permalink($login_page)); ?>" class="like-button-notlogged"><span class="like-icon"></span> <?php esc_html_e('Login To Bookmark Items','listeo_core') ?></a> 
-							<?php } ?>		
+								<a href="<?php echo esc_url(get_permalink($login_page)); ?>" class="like-button-notlogged"><span class="like-icon"></span> <?php esc_html_e('Login To Bookmark Items','listeo_core') ?></a>
+							<?php } ?>
 					<?php } ?>
-					
+
 				<?php }
 
-				$count = get_post_meta($post->ID, 'bookmarks_counter', true); 
+				$count = get_post_meta($post->ID, 'bookmarks_counter', true);
 				if ( $count ) : ?>
 				<span id="bookmarks-counter"><?php printf( _n( '%s person bookmarked this place', '%s people bookmarked this place', $count, 'listeo_core' ), number_format_i18n( $count ) ); ?> </span>
 				<?php endif; ?>
-			<?php 
+			<?php
 			endif;
-			if(!empty($share)):  
+			if(!empty($share)):
 					$id = $post->ID;
 			        $title = urlencode($post->post_title);
 			        $url =  urlencode( get_permalink($id) );
@@ -418,11 +418,11 @@ class Listeo_Core_Bookmarks_Share_Widget extends Listeo_Core_Widget {
 			         <li><?php echo '<a target="_blank" class="twitter-share" href="https://twitter.com/share?url=' . $url . '&amp;text=' . esc_attr($summary ). '" title="' . __( 'Twitter', 'listeo_core' ) . '"><i class="fa fa-twitter"></i> Tweet</a></a>'; ?></li>
 			        <li><?php echo '<a target="_blank"  class="pinterest-share" href="http://pinterest.com/pin/create/button/?url=' . $url . '&amp;description=' . esc_attr($summary) . '&media=' . esc_attr($imageurl) . '" onclick="window.open(this.href); return false;"><i class="fa fa-pinterest-p"></i> Pin It</a></a>'; ?></li>
 			        </ul>
-			
+
 					<div class="clearfix"></div>
 			</div>
 	 	<?php endif;
-		echo $after_widget; 
+		echo $after_widget;
 
 		$content = ob_get_clean();
 
@@ -454,13 +454,13 @@ class Listeo_Core_Contact_Vendor_Widget extends Listeo_Core_Widget {
 				'std'   => __( 'Message Vendor', 'listeo_core' ),
 				'label' => __( 'Title', 'listeo_core' )
 			),
-				
+
 			'contact' => array(
 				'type'  => 'dropdown',
 				'std'	=> '',
 				'options' => $this->get_forms(),
 				'label' => __( 'Choose contact form', 'listeo_core' )
-			),			
+			),
 		);
 		$this->register();
 
@@ -478,19 +478,19 @@ class Listeo_Core_Contact_Vendor_Widget extends Listeo_Core_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance ) {
-		
+
 		global $post;
 		$contact_enabled = get_post_meta( $post->ID, '_email_contact_widget', true );
-		
+
 		if( !$contact_enabled ) {
-			return; 
+			return;
 		}
 
 		ob_start();
 
 		extract( $args );
-	
-		echo $before_widget; 
+
+		echo $before_widget;
 		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 
 		?>
@@ -506,8 +506,8 @@ class Listeo_Core_Contact_Vendor_Widget extends Listeo_Core_Widget {
 
 		<!-- Agent Widget / End -->
 		<?php
-		
-		 echo $after_widget; 
+
+		 echo $after_widget;
 
 		$content = ob_get_clean();
 
@@ -571,8 +571,8 @@ class Listeo_Core_Search_Widget extends Listeo_Core_Widget {
 					'archive' => __( 'Redirect to listings archive page', 'listeo_core' ),
 					),
 				'label' => __( 'Choose form action', 'listeo_core' )
-			),	
-		
+			),
+
 		);
 		$this->register();
 	}
@@ -594,17 +594,17 @@ class Listeo_Core_Search_Widget extends Listeo_Core_Widget {
 
 		extract( $args );
 
-		echo $before_widget; 
+		echo $before_widget;
 			$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 			if(isset($instance['action'])){
-				$action  = apply_filters( 'listeo_core_search_widget_action', $instance['action'], $instance, $this->id_base);	
+				$action  = apply_filters( 'listeo_core_search_widget_action', $instance['action'], $instance, $this->id_base);
 			}
-			
-			
+
+
 			if ( $title ) {
 				echo $before_title . $title;
 				//if(isset($_GET['keyword_search'])) : echo '<a id="listeo_core_reset_filters" href="#">'.esc_html__('Reset Filters','listeo_core').'</a>'; endif;
-			 	echo $after_title; 
+			 	echo $after_title;
 			}
 			$dynamic =  (get_option('listeo_dynamic_features')=="on") ? "on" : "off";
 			if(isset($action) && $action == 'archive') {
@@ -613,9 +613,9 @@ class Listeo_Core_Search_Widget extends Listeo_Core_Widget {
 				echo do_shortcode('[listeo_search_form  dynamic_filters="'.$dynamic.'" more_text_close="'.esc_html__('Close Filters','listeo_core').'" more_text_open="'.esc_html__('More Filters','listeo_core').'"]');
 			}
 
-		echo $after_widget; 
+		echo $after_widget;
 
-		
+
 
 
 	}
@@ -645,8 +645,8 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 				'std'   => __( 'Booking', 'listeo_core' ),
 				'label' => __( 'Title', 'listeo_core' )
 			),
-			
-		
+
+
 		);
 		$this->register();
 	}
@@ -661,7 +661,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance ) {
-		
+
 
 
 		ob_start();
@@ -680,9 +680,9 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 			}
 		}
 		echo $before_widget;
-		if ( $title ) {		
-			echo $before_title.'<i class="fa fa-calendar-check-o "></i> ' . $title . $after_title; 
-		} 
+		if ( $title ) {
+			echo $before_title.'<i class="fa fa-calendar-check-o "></i> ' . $title . $after_title;
+		}
 
 		$days_list = array(
 			0	=> __('Monday','listeo_core'),
@@ -692,21 +692,21 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 			4 	=> __('Friday','listeo_core'),
 			5 	=> __('Saturday','listeo_core'),
 			6 	=> __('Sunday','listeo_core'),
-		); 
+		);
 
 		// get post meta and save slots to var
 		$post_info = get_queried_object();
 
 		$post_meta = get_post_meta( $post_info->ID );
-		
+
 		// get slots and check if not empty
-		
+
 		if ( isset( $post_meta['_slots_status'][0] ) && !empty( $post_meta['_slots_status'][0] ) ) {
 			if ( isset( $post_meta['_slots'][0] ) ) {
 				$slots = json_decode( $post_meta['_slots'][0] );
 				if ( strpos( $post_meta['_slots'][0], '-' ) == false ) $slots = false;
 		   	} else {
-				$slots = false;	
+				$slots = false;
 			}
 		} else {
 			$slots = false;
@@ -719,22 +719,22 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 
 		if ( $post_meta['_listing_type'][0] == 'rental' || $post_meta['_listing_type'][0] == 'service' ) {
 
- 
+
 			// get reservations for next 10 years to make unable to set it in datapicker
 			if( $post_meta['_listing_type'][0] == 'rental' ) {
 				$records = $this->bookings->get_bookings( date('Y-m-d H:i:s'),  date('Y-m-d H:i:s', strtotime('+3 years')), array( 'listing_id' => $post_info->ID, 'type' => 'reservation' ) );
-	
+
 			} else {
 
-				$records = $this->bookings->get_bookings( 
-					date('Y-m-d H:i:s'),  
-					date('Y-m-d H:i:s', strtotime('+3 years')), 
+				$records = $this->bookings->get_bookings(
+					date('Y-m-d H:i:s'),
+					date('Y-m-d H:i:s', strtotime('+3 years')),
 					array( 'listing_id' => $post_info->ID, 'type' => 'reservation' ),
 					'booking_date',
-					$limit = '', $offset = '','owner' );	
+					$limit = '', $offset = '','owner' );
 
 			}
-			
+
 
 			// store start and end dates to display it in the widget
 			$wpk_start_dates = array();
@@ -763,17 +763,17 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 							);
 
 							foreach ($period as $day_number => $value) {
-								$disabled_dates[] = $value->format('Y-m-d');  
+								$disabled_dates[] = $value->format('Y-m-d');
 							}
 
-						} 
+						}
 					} else {
 								// when we have one day reservation
 						if ($record['date_start'] == $record['date_end'])
 						{
 							$disabled_dates[] = date('Y-m-d', strtotime($record['date_start']));
 						} else {
-							
+
 							// if we have many dats reservations we have to add every date between this days
 							$period = new DatePeriod(
 								new DateTime( date( 'Y-m-d', strtotime( $record['date_start']) ) ),
@@ -782,7 +782,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 							);
 
 							foreach ($period as $day_number => $value) {
-								$disabled_dates[] = $value->format('Y-m-d');  
+								$disabled_dates[] = $value->format('Y-m-d');
 							}
 
 						}
@@ -790,7 +790,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 
 				}
 			}
-			
+
 				if ( isset( $wpk_start_dates ) )
 				{
 					?>
@@ -800,7 +800,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 					</script>
 					<?php
 				}
-				if ( isset( $disabled_dates ) )	
+				if ( isset( $disabled_dates ) )
 				{
 					?>
 					<script>
@@ -809,26 +809,26 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 					<?php
 				}
 		} // end if  rental
-		
 
-		if ( $post_meta['_listing_type'][0] == 'event') { 
+
+		if ( $post_meta['_listing_type'][0] == 'event') {
 			$max_tickets = (int) get_post_meta($post_info->ID,"_event_tickets",true);
-			$sold_tickets = (int) get_post_meta($post_info->ID,"_event_tickets_sold",true); 
-			$av_tickets = $max_tickets-$sold_tickets; 
-			
+			$sold_tickets = (int) get_post_meta($post_info->ID,"_event_tickets_sold",true);
+			$av_tickets = $max_tickets-$sold_tickets;
+
 			if($av_tickets<=0){?>
 				<p id="sold-out"><?php esc_html_e('The tickets have sold out','listeo_core') ?></p></div>
 			<?php
 			return; }
-			
+
 		}
 		?>
-		
-		<div class="row with-forms  margin-top-0" id="booking-widget-anchor" >		
+
+		<div class="row with-forms  margin-top-0" id="booking-widget-anchor" >
 			<form id="form-booking" data-post_id="<?php echo $post_info->ID; ?>" class="form-booking-<?php echo $post_meta['_listing_type'][0];?>" action="<?php echo esc_url(get_permalink(get_option( 'listeo_booking_confirmation_page' ))); ?>" method="post">
 
-					
-					<?php if ( $post_meta['_listing_type'][0] != 'event') { 
+
+					<?php if ( $post_meta['_listing_type'][0] != 'event') {
 
 
 						$minspan = get_post_meta($post_info->ID,'_min_days',true); ?>
@@ -841,15 +841,15 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 						?>
 					<!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
 					<div class="col-lg-12">
-						<input 
-						type="text" 
+						<input
+						type="text"
 						data-minspan="<?php echo ($minspan) ? $minspan : '0' ; ?>"
-						id="date-picker" 
-						readonly="readonly" 
-						class="date-picker-listing-<?php echo esc_attr($post_meta['_listing_type'][0]); ?>" 
-						autocomplete="off" 
-						placeholder="<?php esc_attr_e('Date','listeo_core'); ?>" 
-						value="" 
+						id="date-picker"
+						readonly="readonly"
+						class="date-picker-listing-<?php echo esc_attr($post_meta['_listing_type'][0]); ?>"
+						autocomplete="off"
+						placeholder="<?php esc_attr_e('Date','listeo_core'); ?>"
+						value=""
 						listing_type="<?php echo $post_meta['_listing_type'][0]; ?>" />
 					</div>
 
@@ -864,11 +864,11 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 								<div class="panel-dropdown-scrollable">
 									<input id="slot" type="hidden" name="slot" value="" />
 									<input id="listing_id" type="hidden" name="listing_id" value="<?php echo $post_info->ID; ?>" />
-									<?php foreach( $slots as $day => $day_slots) { 
+									<?php foreach( $slots as $day => $day_slots) {
 										if ( empty( $day_slots )) continue;
 										?>
 
-										<?php foreach( $day_slots as $number => $slot) { 
+										<?php foreach( $day_slots as $number => $slot) {
 										$slot = explode('|' , $slot); ?>
 										<!-- Time Slot -->
 										<div class="time-slot" day="<?php echo $day; ?>">
@@ -879,7 +879,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 												<span><?php echo $slot[1]; esc_html_e(' slots available','listeo_core') ?></span>
 											</label>
 										</div>
-										<?php } ?>	
+										<?php } ?>
 
 									<?php } ?>
 								</div>
@@ -894,7 +894,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 						<div class="col-lg-12">
 							<input type="text" class="time-picker flatpickr-input active" placeholder="<?php esc_html_e('End Time','listeo_core') ?>" id="_hour_end" name="_hour_end" readonly="readonly">
 						</div>
-						<?php 
+						<?php
 					endif;
 					$_opening_hours_status = get_post_meta($post_id, '_opening_hours_status',true);
 					$_opening_hours_status = '';
@@ -902,41 +902,41 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 						<script>
 							var availableDays = <?php if($_opening_hours_status){ echo json_encode( $opening_hours, true ); } else { echo json_encode( '', true); }?>;
 						</script>
-					
+
 					<?php } ?>
-					
-					<?php $bookable_services = listeo_get_bookable_services($post_info->ID); 
+
+					<?php $bookable_services = listeo_get_bookable_services($post_info->ID);
 
 					if(!empty($bookable_services)) : ?>
-						
+
 						<!-- Panel Dropdown -->
 						<div class="col-lg-12">
 							<div class="panel-dropdown booking-services">
 								<a href="#"><?php esc_html_e('Extra Services','listeo_core'); ?> <span class="services-counter">0</span></a>
 								<div class="panel-dropdown-content padding-reset">
 									<div class="panel-dropdown-scrollable">
-									
+
 									<!-- Bookable Services -->
 									<div class="bookable-services">
-										<?php 
+										<?php
 										$i = 0;
 										$currency_abbr = get_option( 'listeo_currency' );
 										$currency_postion = get_option( 'listeo_currency_postion' );
-										$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr); 
+										$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr);
 										foreach ($bookable_services as $key => $service) { $i++; ?>
 											<div class="single-service">
-<?php if(isset($service['bookable_quantity'])) : ?> <?php endif; ?> 
+<?php if(isset($service['bookable_quantity'])) : ?> <?php endif; ?>
 												<input type="checkbox" class="bookable-service-checkbox" name="_service[<?php echo sanitize_title($service['name']); ?>]" value="<?php echo sanitize_title($service['name']); ?>" id="tag<?php echo esc_attr($i); ?>"/>
-			
+
 												<label for="tag<?php echo esc_attr($i); ?>">
 													<h5><?php echo esc_html($service['name']); ?></h5>
-													<span class="single-service-price"> <?php 
+													<span class="single-service-price"> <?php
 													if(empty($service['price']) || $service['price'] == 0) {
 														esc_html_e('Free','listeo_core');
 													} else {
-													 	if($currency_postion == 'before') { echo $currency_symbol.' '; } 
-														echo esc_html($service['price']); 
-														if($currency_postion == 'after') { echo ' '.$currency_symbol; } 
+													 	if($currency_postion == 'before') { echo $currency_symbol.' '; }
+														echo esc_html($service['price']);
+														if($currency_postion == 'after') { echo ' '.$currency_symbol; }
 													}
 													?></span>
 													<?php if($service['description']) { ?>
@@ -963,10 +963,10 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 							</div>
 						</div>
 						<!-- Panel Dropdown / End -->
-						<?php 
+						<?php
 					endif;
-					$max_guests = get_post_meta($post_info->ID,"_max_guests",true); 
-					$count_per_guest = get_post_meta($post_info->ID,"_count_per_guest",true); 
+					$max_guests = get_post_meta($post_info->ID,"_max_guests",true);
+					$count_per_guest = get_post_meta($post_info->ID,"_count_per_guest",true);
 					if(get_option('listeo_remove_guests')){
 						$max_guests = 1;
 					}
@@ -980,7 +980,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 									<div class="qtyTitle"><?php esc_html_e('People','listeo_core') ?></div>
 									<input type="text" name="qtyInput" data-max="<?php echo esc_attr($max_guests); ?>" class="adults <?php if($count_per_guest) echo 'count_per_guest'; ?>" value="1">
 								</div>
-								
+
 							</div>
 						</div>
 					</div> -->
@@ -988,19 +988,19 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 
 			<?php } ?>
 
-			<?php if ( $post_meta['_listing_type'][0] == 'event') { 
+			<?php if ( $post_meta['_listing_type'][0] == 'event') {
 				$max_tickets = (int) get_post_meta($post_info->ID,"_event_tickets",true);
-				$sold_tickets = (int) get_post_meta($post_info->ID,"_event_tickets_sold",true); 
-				$av_tickets = $max_tickets-$sold_tickets; 
+				$sold_tickets = (int) get_post_meta($post_info->ID,"_event_tickets_sold",true);
+				$av_tickets = $max_tickets-$sold_tickets;
 
-				?><input 
-						type="hidden" 
-						id="date-picker" 
-						readonly="readonly" 
-						class="date-picker-listing-<?php echo esc_attr($post_meta['_listing_type'][0]); ?>" 
-						autocomplete="off" 
-						placeholder="<?php esc_attr_e('Date','listeo_core'); ?>" 
-						value="<?php echo $post_meta['_event_date'][0]; ?>" 
+				?><input
+						type="hidden"
+						id="date-picker"
+						readonly="readonly"
+						class="date-picker-listing-<?php echo esc_attr($post_meta['_listing_type'][0]); ?>"
+						autocomplete="off"
+						placeholder="<?php esc_attr_e('Date','listeo_core'); ?>"
+						value="<?php echo $post_meta['_event_date'][0]; ?>"
 						listing_type="<?php echo $post_meta['_listing_type'][0]; ?>" />
 				<div class="col-lg-12">
 						<div class="panel-dropdown">
@@ -1012,41 +1012,41 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 									<input type="text" name="qtyInput" <?php if($max_tickets>0){ ?>data-max="<?php echo esc_attr($av_tickets); ?>" <?php } ?>
 									id="tickets" value="1">
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
-					<?php $bookable_services = listeo_get_bookable_services($post_info->ID); 
+					<?php $bookable_services = listeo_get_bookable_services($post_info->ID);
 
 					if(!empty($bookable_services)) : ?>
-						
+
 						<!-- Panel Dropdown -->
 						<div class="col-lg-12">
 							<div class="panel-dropdown booking-services">
 								<a href="#"><?php esc_html_e('Extra Services','listeo_core'); ?> <span class="services-counter">0</span></a>
 								<div class="panel-dropdown-content padding-reset">
 									<div class="panel-dropdown-scrollable">
-									
+
 									<!-- Bookable Services -->
 									<div class="bookable-services">
-										<?php 
+										<?php
 										$i = 0;
 										$currency_abbr = get_option( 'listeo_currency' );
 										$currency_postion = get_option( 'listeo_currency_postion' );
-										$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr); 
+										$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr);
 										foreach ($bookable_services as $key => $service) { $i++; ?>
 											<div class="single-service">
 												<input type												<input type="checkbox" class="bookable-service-checkbox" name="_service[<?php echo sanitize_title($service['name']); ?>]" value="<?php echo sanitize_title($service['name']); ?>" id="tag<?php echo esc_attr($i); ?>"/>
-			
+
 												<label for="tag<?php echo esc_attr($i); ?>">
 													<h5><?php echo esc_html($service['name']); ?></h5>
-													<span class="single-service-price"> <?php 
+													<span class="single-service-price"> <?php
 													if(empty($service['price']) || $service['price'] == 0) {
 														esc_html_e('Free','listeo_core');
 													} else {
-													 	if($currency_postion == 'before') { echo $currency_symbol.' '; } 
-														echo esc_html($service['price']); 
-														if($currency_postion == 'after') { echo ' '.$currency_symbol; } 
+													 	if($currency_postion == 'before') { echo $currency_symbol.' '; }
+														echo esc_html($service['price']);
+														if($currency_postion == 'after') { echo ' '.$currency_symbol; }
 													}
 													?></span>
 												</label>
@@ -1070,7 +1070,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 							</div>
 						</div>
 						<!-- Panel Dropdown / End -->
-						<?php 
+						<?php
 					endif; ?>
 					<!-- Panel Dropdown / End -->
 			<?php } ?>
@@ -1080,74 +1080,74 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 				<input type="hidden" id="listing_id" value="<?php echo $post_info->ID; ?>" />
 				<input id="booking" type="hidden" name="value" value="booking_form" />
 				<?php if(is_user_logged_in()) :
-					
-					if ($post_meta['_listing_type'][0] == 'event') { 
-						$book_btn = esc_html__('Make a Reservation','listeo_core'); 
-					} else { 
+
+					if ($post_meta['_listing_type'][0] == 'event') {
+						$book_btn = esc_html__('Make a Reservation','listeo_core');
+					} else {
 						if(get_post_meta($post_info->ID,'_instant_booking', true)){
-							$book_btn = esc_html__('Book Now','listeo_core'); 	
+							$book_btn = esc_html__('Book Now','listeo_core');
 						} else {
-							$book_btn = esc_html__('Request Booking','listeo_core'); 	
+							$book_btn = esc_html__('Request Booking','listeo_core');
 						}
-						
+
 					}  ?>
 
 					<a href="#" class="button book-now fullwidth margin-top-5"><div class="loadingspinner"></div><span class="book-now-text"><?php echo $book_btn; ?></span></a>
-				<?php else : 
-					$popup_login = get_option( 'listeo_popup_login','ajax' ); 
+				<?php else :
+					$popup_login = get_option( 'listeo_popup_login','ajax' );
 					if($popup_login == 'ajax') { ?>
 
-						<a href="#sign-in-dialog" class="button fullwidth margin-top-5 popup-with-zoom-anim book-now-notloggedin"><div class="loadingspinner"></div><span class="book-now-text"><?php esc_html_e('Login to Book','listeo_core') ?></span></a>
+						<a href="#sign-in-dialog" class="button fullwidth margin-top-5 popup-with-zoom-anim book-now-notloggedin sign_in_link"><div class="loadingspinner"></div><span class="book-now-text"><?php esc_html_e('Login to Book','listeo_core') ?></span></a>
 
-					<?php } else { 
+					<?php } else {
 
 						$login_page = get_option('listeo_profile_page'); ?>
-						<a href="<?php echo esc_url(get_permalink($login_page)); ?>" class="button fullwidth margin-top-5 book-now-notloggedin"><div class="loadingspinner"></div><span class="book-now-text"><?php esc_html_e('Login To Book','listeo_core') ?></span></a> 
+						<a href="<?php echo esc_url(get_permalink($login_page)); ?>" class="button fullwidth margin-top-5 book-now-notloggedin"><div class="loadingspinner"></div><span class="book-now-text"><?php esc_html_e('Login To Book','listeo_core') ?></span></a>
 					<?php } ?>
-					
+
 				<?php endif; ?>
-	
+
 				<?php if ($post_meta['_listing_type'][0] == 'event' && isset($post_meta['_event_date'][0])) { ?>
 				<div class="booking-event-date">
 					<strong>Event date: </strong>
-					<span><?php 
-					
+					<span><?php
+
 					$_event_datetime = $post_meta['_event_date'][0];
                		$_event_date = list($_event_datetime) = explode(' -', $_event_datetime);
- 					
+
 					echo $_event_date[0]; ?></span>
 				</div>
-				<?php } ?>	
+				<?php } ?>
 				<div class="booking_original_cost" style="display: none;">
-					<?php 
+					<?php
 						$currency_abbr = get_option( 'listeo_currency' );
 						$currency_postion = get_option( 'listeo_currency_postion' );
-						$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr); 
+						$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr);
 					?>
 					<strong><?php esc_html_e('Price','listeo_core'); ?></strong>
 					<span>
 						<?php if($currency_postion == 'before') { echo $currency_symbol; } ?>
-					<?php 
+					<?php
 						$reservation_fee = (float) get_post_meta($post_info->ID,'_reservation_price',true);
 						$normal_price = (float) get_post_meta($post_info->ID,'_normal_price',true);
-						
+
 						echo $reservation_fee+$normal_price;
 						if($currency_postion == 'after') { echo $currency_symbol; } ?></span>
 				</div>
 				<div class="booking-estimated-cost" <?php if ($post_meta['_listing_type'][0] != 'event' ) { ?>style="display: none;"<?php } ?>>
-					<?php 
+					<?php
 						$currency_abbr = get_option( 'listeo_currency' );
 						$currency_postion = get_option( 'listeo_currency_postion' );
-						$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr); 
+						$currency_symbol = Listeo_Core_Listing::get_currency_symbol($currency_abbr);
 					?>
 					<strong><?php esc_html_e('Total Cost','listeo_core'); ?></strong>
 					<span>
 						<?php if($currency_postion == 'before') { echo $currency_symbol; } ?>
-					<?php 
+					<?php
 					if ($post_meta['_listing_type'][0] == 'event') {
 						$reservation_fee = (float) get_post_meta($post_info->ID,'_reservation_price',true);
 						$normal_price = (float) get_post_meta($post_info->ID,'_normal_price',true);
-						
+
 						echo $reservation_fee+$normal_price;
 					} else echo '0' ?>
 						<?php if($currency_postion == 'after') { echo $currency_symbol; } ?></span>
@@ -1158,7 +1158,7 @@ class Listeo_Core_Booking_Widget extends Listeo_Core_Widget {
 		</form>
 		<?php
 
-		echo $after_widget; 
+		echo $after_widget;
 
 		$content = ob_get_clean();
 
@@ -1187,8 +1187,8 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 				'std'   => __( 'Opening Hours', 'listeo_core' ),
 				'label' => __( 'Title', 'listeo_core' )
 			),
-			
-		
+
+
 		);
 		$this->register();
 	}
@@ -1203,10 +1203,10 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 	 * @return void
 	 */
 	public function widget( $args, $instance ) {
-		
+
 
 		ob_start();
-		
+
 		extract( $args );
 		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 		$queried_object = get_queried_object();
@@ -1216,7 +1216,7 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 			$listing_type = get_post_meta( $post_id, '_listing_type', true );
 		}
 
-		if( !$listing_type  == 'service') {  
+		if( !$listing_type  == 'service') {
 			return;
 		}
 		$_opening_hours_status = get_post_meta($post_id, '_opening_hours_status',true);
@@ -1225,12 +1225,12 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 		}
 		$has_hours = false;
 		//check if has any horus saved
-		$days = listeo_get_days(); 
+		$days = listeo_get_days();
 		foreach ($days as $d_key => $value) {
-				$opening_day = get_post_meta( $post_id, '_'.$d_key.'_opening_hour', true ); 
-				$closing_day = get_post_meta( $post_id, '_'.$d_key.'_closing_hour', true ); 
+				$opening_day = get_post_meta( $post_id, '_'.$d_key.'_opening_hour', true );
+				$closing_day = get_post_meta( $post_id, '_'.$d_key.'_closing_hour', true );
 
-				if( (!empty($opening_day) && $opening_day != "Closed")  || ( !empty($closing_day) && $closing_day != "Closed")) { 
+				if( (!empty($opening_day) && $opening_day != "Closed")  || ( !empty($closing_day) && $closing_day != "Closed")) {
 					$has_hours = true;
 				}
 			}
@@ -1242,68 +1242,68 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
                 <div class="listing-badge now-open"><?php esc_html_e('Now Open','listeo_core'); ?></div>
             <?php } else { ?>
                 <div class="listing-badge now-closed"><?php esc_html_e('Now Closed','listeo_core'); ?></div>
-        <?php 
-        } 
-		if ( $title ) {		
-			echo $before_title.'<i class="sl sl-icon-clock"></i> ' . $title . $after_title; 
-		} 
+        <?php
+        }
+		if ( $title ) {
+			echo $before_title.'<i class="sl sl-icon-clock"></i> ' . $title . $after_title;
+		}
 		?>
 		<ul>
 			<?php
 			$clock_format = get_option('listeo_clock_format');
 
 			foreach ($days as $d_key => $value) {
-				$opening_day = get_post_meta( $post_id, '_'.$d_key.'_opening_hour', true ); 
-				$closing_day = get_post_meta( $post_id, '_'.$d_key.'_closing_hour', true ); 
-				
-			
-	  
-	
-									   
+				$opening_day = get_post_meta( $post_id, '_'.$d_key.'_opening_hour', true );
+				$closing_day = get_post_meta( $post_id, '_'.$d_key.'_closing_hour', true );
+
+
+
+
+
 
 				?>
-					
-					<?php 
-																	 
-																																																				
-	   
 
-					if(is_array($opening_day)){	
+					<?php
+
+
+
+
+					if(is_array($opening_day)){
 						if(!empty($opening_day[0])) :
 
-							echo '<li>'; echo esc_html($value); 
-						
+							echo '<li>'; echo esc_html($value);
+
 							echo '<span>';
 							foreach ($opening_day as $key => $opening) {
 								if(!empty($opening)){
 
 
 									$closing = $closing_day[$key];
-									
+
 									if( $clock_format == 12 ){
 										if(substr($opening, -1) !='M' && $opening != 'Closed'){
-											$opening = DateTime::createFromFormat('H:i', $opening)->format('h:i A');			
+											$opening = DateTime::createFromFormat('H:i', $opening)->format('h:i A');
 										}
 
 										if(substr($closing, -1)!='M' && $closing != 'Closed'){
-											
+
 											$closing = DateTime::createFromFormat('H:i', $closing)->format('h:i A');
 
 											if($closing == '00:00') { $closing = '24:00'; }
 										}
-									} 
-								
+									}
+
 								?>
-								
-									<?php echo esc_html($opening); ?> 
-									- 
-									<?php  
+
+									<?php echo esc_html($opening); ?>
+									-
+									<?php
 									if( $clock_format == 12 && $closing == '12:00 AM'){
 										echo  '12:00 PM';
 									} else if ($clock_format != 12 && $closing == '00:00'){
 										echo  '24:00';
 									} else {
-										echo esc_html($closing); 	
+										echo esc_html($closing);
 									}
 									echo '<br>';
 									?>
@@ -1314,10 +1314,10 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 					} else {
 						//not array, old listings
 						if(!empty($opening_day) && !empty($closing_day)) {
-						echo '<li>'; echo esc_html($value); 
+						echo '<li>'; echo esc_html($value);
 							if( $clock_format == 12 ){
 								if(substr($opening_day, -1) !='M' && $opening_day != 'Closed'){
-									$opening_day = DateTime::createFromFormat('H:i', $opening_day)->format('h:i A');			
+									$opening_day = DateTime::createFromFormat('H:i', $opening_day)->format('h:i A');
 								}
 
 								if(substr($closing_day, -1)!='M' && $closing_day != 'Closed'){
@@ -1328,38 +1328,38 @@ class Listeo_Core_Opening_Widget extends Listeo_Core_Widget {
 								}
 							} ?>
 							<span>
-								<?php echo esc_html($opening_day); ?> 
-								- 
-								<?php  
+								<?php echo esc_html($opening_day); ?>
+								-
+								<?php
 								if( $clock_format == 12 && $closing_day == '12:00 AM'){
 									echo  '12:00 PM';
 								} else if ($clock_format != 12 && $closing_day == '00:00'){
 									echo  '24:00';
 								} else {
-									echo esc_html($closing_day); 	
+									echo esc_html($closing_day);
 								}
-								
+
 								?> </span>
 						<?php } else { ?>
 							<li><?php echo $value; ?><span><?php esc_html_e('Closed','listeo_core') ?></span>
 						<?php } ?>
 						</li>
 					<?php } ?>
-				
+
 
 			<?php } //end foreach ?>
 		</ul>
-				
-		<?php
-		
 
-		echo $after_widget; 
+		<?php
+
+
+		echo $after_widget;
 
 		$content = ob_get_clean();
 
 		echo $content;
 
-		
+
 	}
 }
 /**
@@ -1407,8 +1407,8 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 				'std'   => 'on',
 				'label' => __( 'Show Send message button', 'listeo_core' )
 			),
-			
-		
+
+
 		);
 		$this->register();
 	}
@@ -1433,7 +1433,7 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 		$queried_object = get_queried_object();
 		$owner_id = get_the_author_meta( 'ID' );
-		
+
 		if(!$owner_id) {
 			return;
 		}
@@ -1442,36 +1442,36 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 		    $post_id = $queried_object->ID;
 			$listing_type = get_post_meta( $post_id, '_listing_type', true );
 		}
-		
-  
+
+
 		echo $before_widget;
-            
+
 		if ( $title ) {	?>
 			<div>
 				<center>
 					<div class="listeo_list_provider_logo new-logo-sec">
 						<a href="<?php echo esc_url(get_author_posts_url( $owner_id )); ?>" >
-							<?php 	
+							<?php
 
 							$custom_avatar_id 	= get_the_author_meta( 'listeo_core_avatar_id', $owner_id ) ;
 							$custom_avatar 		= wp_get_attachment_image_src( $custom_avatar_id, 'listeo-avatar' );
 
 							if ( $custom_avatar )  {
 								echo "<img src='".$custom_avatar[0]."' style='width: 100px; height : auto;'> <br/>";
-							} else {		
-//								echo get_avatar( $owner_id, 56 );  
+							} else {
+//								echo get_avatar( $owner_id, 56 );
 							}
 							?>
 						</a>
 					</div>
-					<div class="listeo_list_provider_name new-list-provider-name"> 
+					<div class="listeo_list_provider_name new-list-provider-name">
 						<a href="<?php echo esc_url(get_author_posts_url( $owner_id )); ?>">
 							<h4><?php echo $owner_data->first_name; ?> <?php echo $owner_data->last_name; ?></h4>
 						<?php if(empty($owner_data->first_name) && empty($owner_data->last_name)){ ?>
                             <h4><?php echo $owner_data->display_name ?></h4>
                             <?php } ?>
 						</a>
-						<?php 
+						<?php
 							$total_visitor_reviews_args = array(
 								'post_author' 	=> $owner_id,
 								'parent'      	=> 0,
@@ -1481,8 +1481,8 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 		        				'order' 		=> 'DESC',
 							);
 							add_filter( 'comments_clauses', 'listeo_top_comments_only' );
-							$total_visitor_reviews = get_comments( $total_visitor_reviews_args ); 
-							remove_filter( 'comments_clauses', 'listeo_top_comments_only' ); 
+							$total_visitor_reviews = get_comments( $total_visitor_reviews_args );
+							remove_filter( 'comments_clauses', 'listeo_top_comments_only' );
 							$review_total = 0;
 							$review_count = 0;
 							foreach($total_visitor_reviews as $review) {
@@ -1491,54 +1491,54 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 								 $review_count++;
 								}
 							}
-							if($review_total > 0): 
+							if($review_total > 0):
 								$rating = $review_total/$review_count; ?>
 								<div class="star-rating new-star-rate" data-rating="<?php echo esc_attr($rating);?>">
 									<div class="rating-counter">
 										<a href="#listing-reviews">(<?php echo esc_attr($review_count);?> <?php esc_html_e('reviews','listeo'); ?>)</a>
 									</div>
 								</div>
-						<?php endif; ?>	
+						<?php endif; ?>
 					</div>
 				</center>
 			</div>
-			
+
 		<?php }
-		
+
 		$show_bio = (isset($instance['bio']) && !empty($instance['bio'])) ? true : false ;
 
-				
-	 
-							  
-																					   
-		 
-			
+
+
+
+
+
+
 		/*$show_email = (isset($instance['email']) && !empty($instance['email'])) ? true : false ;
 		$show_phone = (isset($instance['phone']) && !empty($instance['phone'])) ? true : false ;
 		$show_logged_in = get_option('listeo_user_contact_details_visibility');*/
-		
-																						  
-																						  
-																							 
+
+
+
+
 		/*if(is_user_logged_in() ){
-										 
-						 
-												
+
+
+
 			$show_details = true;
 		} else {
 			if(get_option('listeo_user_contact_details_visibility')){
 				$show_details = false;
-						  
-			
-						   
-	 
+
+
+
+
 			} else {
 				$show_details = true;
 			}
 		}*/
-		
-		if( is_user_logged_in() ) {  
-   
+
+		if( is_user_logged_in() ) {
+
 			if((isset($instance['contact']) && !empty($instance['contact']))) : ?>
 				<!-- Reply to review popup -->
 				<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
@@ -1547,17 +1547,17 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 					</div>
 					<div class="message-reply margin-top-0">
 						<form action="" id="send-message-from-widget" data-listingid="<?php echo esc_attr($post_id); ?>" >
-							<textarea 
+							<textarea
 							required
-							data-recipient="<?php echo esc_attr($owner_id); ?>"  
-							data-referral="listing_<?php echo esc_attr($post_id); ?>"  
+							data-recipient="<?php echo esc_attr($owner_id); ?>"
+							data-referral="listing_<?php echo esc_attr($post_id); ?>"
 							cols="40" id="contact-message" name="message" rows="3" placeholder="<?php esc_attr_e('Your message to ','listeo_core'); echo $owner_data->first_name; ?>"></textarea>
 							<button class="button">
-							<i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i><?php esc_html_e('Send Message', 'listeo_core'); ?></button>	
+							<i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i><?php esc_html_e('Send Message', 'listeo_core'); ?></button>
 							<div class="notification closeable success margin-top-20"></div>
-						</form>						
-			 
-	  
+						</form>
+
+
 					</div>
 				</div>
 				<div class="new-list-btn">
@@ -1568,14 +1568,14 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 				</div>
 			<?php endif; ?>
 			<!--<ul class="listing-details-sidebar">
-				<?php 
+				<?php
 					if(isset($owner_data->phone) && !empty($owner_data->phone)): ?>
-						<li> 
-							<i class="sl sl-icon-phone"></i> 
+						<li>
+							<i class="sl sl-icon-phone"></i>
 							<?php echo esc_html($owner_data->phone); ?>
 						</li>
 				<?php
-					endif; 
+					endif;
 				if(isset($owner_data->user_email)): $email = $owner_data->user_email; ?>
 					<li>
 						<i class="fa fa-envelope-o"></i>
@@ -1583,28 +1583,28 @@ class Listeo_Core_Owner_Widget extends Listeo_Core_Widget {
 					</li>
 				<?php endif; ?>
 			</ul>-->
-		<?php 
-			if($show_bio){ 
+		<?php
+			if($show_bio){
 			?>
 			<!--<div class="hosted-by-bio new-hosted">
-				<?php echo wpautop($owner_data->user_description); ?>	
+				<?php echo wpautop($owner_data->user_description); ?>
 			</div>-->
 			<?php
 			}
-		} 
+		}
 		else { ?>
 			<!-- <p id="owner-widget-not-logged-in"><?php //printf( esc_html__( 'Please %s sign %s in to see contact details.', 'listeo_core' ), '<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim">', '</a>' ) ?></p> -->
 			<div class="new-list-btn">
-				<a href="#sign-in-dialog" class="send-message-to-owner button popup-with-zoom-anim listeo_list_provider_meg_btn" style="display:inline-block;">
+				<a href="#sign-in-dialog" class="send-message-to-owner button popup-with-zoom-anim listeo_list_provider_meg_btn sign_in_link" style="display:inline-block;">
 					<?php esc_html_e('Message Vendor', 'listeo'); ?>
 				</a>
 			</div>
 		<?php } ?>
-	
-		<?php
-  
 
-		echo $after_widget; 
+		<?php
+
+
+		echo $after_widget;
 
 		$content = ob_get_clean();
 

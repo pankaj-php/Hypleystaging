@@ -19,7 +19,7 @@ class Listeo_Core_Messages {
         add_action( 'listeo_core_check_messages_from_email', array( $this, 'check_messages_from_email' ) );
         add_action( 'wp_ajax_listeo_create_offer', array( $this, 'listeo_create_offer' ) );
         add_action( 'wp_ajax_send_unverify_listing_msg', array( $this, 'send_unverify_listing_msg' ) );
-
+        add_action( 'listeo_core_send_new_reminder', array( $this, 'send_new_reminder' ) );
         
 	}
 
@@ -32,12 +32,13 @@ class Listeo_Core_Messages {
 
         global $wpdb;
 
-      // set user to checkchanged
-      $strUser     = "cristian@hypley.com";
-      $strPassword = "Australia10";
+        // set user to check
+        $strUser     = "cristian@hypley.com";
+        $strPassword = "Australia10";
 
-      // open
-              $hMail = imap_open ("{imap.secure.emailsrvr.com:993/imap/ssl}INBOX", "$strUser", "$strPassword");
+        // open
+                $hMail = imap_open ("{secure.emailsrvr.com:993/imap/ssl}INBOX", "$strUser", "$strPassword");
+
 
         // get headers
         $aHeaders = imap_headers( $hMail );
@@ -210,6 +211,121 @@ class Listeo_Core_Messages {
 
         return $id;
     }
+	public function send_new_reminder()
+        {
+            global $wpdb;
+           
+            $hours12 = 12*60*60;
+            $hours24 = 24*60*60;
+            $hours30 = 30*60*60;
+            
+            
+            $curretime = current_time('timestamp');
+                            
+            $query = "SELECT cc.*,cm.*, ($curretime - cc.`last_update`) as secs FROM `wp_7JYhc1_listeo_core_conversations` cc LEFT JOIN `wp_7JYhc1_listeo_core_messages` cm on (cc.id = cm.conversation_id  and 
+		cm.id = (Select Max(cm2.id)
+               From `wp_7JYhc1_listeo_core_messages`As cm2
+               Where cm2.conversation_id = cm.conversation_id))  where ( cc.read_user_1 = 0 || cc.read_user_2 = 0 ) and cc.`reminder_count`<3 HAVING secs > CASE WHEN cc.`reminder_count` = 0 THEN  $hours12 WHEN cc.`reminder_count` = 1 THEN $hours24  ELSE $hours30 END";
+             
+             $result = $wpdb->get_results($query);
+            
+             foreach($result as $row)
+             {
+                 
+                if($row->read_user_1 == 0)
+                {
+                    $reciver_id =  $row->user_1;
+                    $sender_id = $row->user_2;
+                    
+                }else
+                {
+                    $reciver_id =  $row->user_2;
+                    $sender_id = $row->user_1;
+                }
+                
+                $mess_arr['conversation_id'] = $row->conversation_id;
+                $mess_arr['sender_id'] = $sender_id;
+                $mess_arr['message'] = $row->message;
+                $mess_arr['recipient'] = $reciver_id;
+                
+                $reminder_count = $row->reminder_count+1;
+                
+                $this->reminder_new_message($mess_arr); 
+                
+                $result  = $wpdb->update( 
+                $wpdb->prefix . 'listeo_core_conversations', 
+                array('reminder_count' => $reminder_count), 
+                array( 'id' => $row->conversation_id) 
+                );
+             }
+
+        }
+	
+	public  function reminder_new_message($args)  {
+
+        global $wpdb;
+        $now_temp_time = current_time('timestamp');        
+		$remind_receiver = get_userdata($args['recipient']);
+		$remind_sender = get_userdata($args['sender_id']);
+		
+		$subject = 'Reminder Of New Message';
+		$body = '<div>'.
+					'<b>'.$remind_sender->display_name.'</b> is waiting for your respons.<br/><br/><br/>'.
+					'New messages:<br/>'.
+					'<p style="color: blue">'.$args['message'].'</p><br/><br/><br/>'.
+					'<p> Or send a message to <b>'.$remind_sender->display_name.'<b> by replying to this email. </p>'.
+				'</div>';
+		$reply_to = $args['conversation_id'].'__'.$args['sender_id'];	
+		self::send( $remind_receiver->user_email, $subject, $body ,'', $reply_to);        
+        return true;
+		
+    }
+	
+	public static function send( $emailto, $subject, $body , $activation_link='', $reply_to=''){
+
+		$from_name 	= get_option('listeo_emails_name',get_bloginfo( 'name' ));
+		$from_email = get_option('listeo_emails_from_email', get_bloginfo( 'admin_email' ));
+		$headers 	= sprintf( "From: %s <%s>\r\n Content-type: text/html; charset=UTF-8\r\n", $from_name, $from_email );
+		if($reply_to != ''){
+			$headers .='Reply-To: '.$reply_to.' <cristian@hypley.com>';
+		}
+
+		if( empty($emailto) || empty( $subject) || empty($body) ){
+			return ;
+		}
+															   
+		$template_loader = new listeo_core_Template_Loader;
+		ob_start();
+
+			$template_loader->get_template_part( 'emails/header' ); ?>
+			<tr>
+				<td align="left" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 25px; padding-right: 25px; padding-bottom: 28px; width: 87.5%; font-size: 16px; font-weight: 400; 
+				padding-top: 28px; 
+				color: #666;
+				font-family: sans-serif;" class="paragraph">
+				<?php 
+					echo $body;
+				?>
+				<?php
+					if($activation_link != '')
+					{
+						?>
+							<p> Your Account Activation Link : <a href="<?php echo $activation_link; ?>">here</a></p>
+							<p>If you are facing any problems with verifying link, try copying and pasting the below url to your browser</p>
+							<p><?php echo $activation_link; ?></p>
+						<?php 
+					}
+				?>
+				</td>
+			</tr>
+		<?php
+			$template_loader->get_template_part( 'emails/footer' ); 
+			$content = ob_get_clean();
+   
+		wp_mail( @$emailto, @$subject, @$content, $headers );
+
+	}
+	
 
     public  function send_new_message( $args = 0 )  {
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -302,6 +418,7 @@ class Listeo_Core_Messages {
             $mess_arr['sender_id'] = get_current_user_id();
             $mess_arr['message'] = $message;
             $mess_arr['attachement_id'] = $att_id;
+            $mess_arr['recipient'] = $_REQUEST['recipient'];
             $id = $this->send_new_message($mess_arr);
         }
         
@@ -314,6 +431,9 @@ class Listeo_Core_Messages {
         }
 
         $result = json_encode($result);
+		//do_action('listeo_mail_to_user_new_message',$conversation_id);
+		$this->reminder_new_message($mess_arr);
+		
         echo $result;      
         die();
     }
@@ -421,6 +541,7 @@ class Listeo_Core_Messages {
     	$mess_arr['sender_id'] = get_current_user_id();
     	$mess_arr['message'] = $message;
         $mess_arr['attachement_id'] = $att_id;
+        $mess_arr['recipient'] = $_REQUEST['recipient'];
 
     	$id = $this->send_new_message($mess_arr);
         
@@ -433,6 +554,9 @@ class Listeo_Core_Messages {
         }
 
         $result = json_encode($result);
+		
+		$this->reminder_new_message($mess_arr);
+		
         echo $result;  
 	   
 	    die();
@@ -833,7 +957,8 @@ class Listeo_Core_Messages {
 
         $result  = $wpdb->update( 
             $wpdb->prefix . 'listeo_core_conversations', 
-            array( 'last_update' => current_time( 'timestamp' ) ), 
+            array( 'last_update' => current_time( 'timestamp' ),
+                   'reminder_count' => 0), 
             array( 'id' => $conversation ) 
         );
         
@@ -913,11 +1038,12 @@ class Listeo_Core_Messages {
 		ob_start();
 		$template_loader = new Listeo_Core_Template_Loader;
         if( isset( $_GET["action"]) && $_GET["action"] == 'view' )  {
+			//echo 'bfndgnfgn';
             $template_loader->set_template_data( 
                 array( 
                     'ids' => $this->get_conversations($user_id) 
                 )
-            ) -> get_template_part( 'account/single_message' ); 
+            ) -> get_template_part( 'account/single_message_new' ); 
         } else {
             if( isset( $_GET["action"]) && $_GET["action"] == 'delete' )  {
                 if(isset( $_GET["conv_id"]) && !empty($_GET["conv_id"])) {
@@ -932,12 +1058,13 @@ class Listeo_Core_Messages {
             }
             $total = count($this->get_conversations($user_id));
             $max_number_pages = ceil($total/$limit);
+			
             $template_loader->set_template_data( 
                 array( 
                     'ids' => $this->get_conversations($user_id,$limit,$offset),
                     'total_pages' => $max_number_pages
                 ) 
-            ) -> get_template_part( 'account/messages' ); 
+            ) -> get_template_part( 'account/messages-list' ); 
         }
 
 		return ob_get_clean();
